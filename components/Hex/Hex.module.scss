@@ -1,0 +1,55 @@
+@import 'styles/mixin';
+
+// .HexCell {
+//   width: 1rem;
+//   font-size: 1rem;
+// }
+.HexContainer {
+  &:nth-child(even) {
+    margin-left: 52px;
+  }
+  &:after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+.HexCell {
+  width: 100px;
+  height: 50px;
+  position: relative;
+  float: left;
+  background: #ff6600;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+  &:before {
+    content: '';
+    position: absolute;
+    border-bottom: 30px solid #ff6600;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+    top: -30px;
+    transition: all 0.3s ease;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    border-top: 30px solid #ff6600;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+    bottom: -30px;
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    background: darken(#ff6600, 20%);
+    &:before {
+      border-bottom: 30px solid darken(#ff6600, 20%);
+    }
+    &:after {
+      border-top: 30px solid darken(#ff6600, 20%);
+    }
+  }
+}
