@@ -1,13 +1,15 @@
-import HexCell from './HexCell';
-import styles from './Hex.module.scss';
+import HexRow from './HexRow';
 
-const HexContainer = () => {
+export interface HexCodes {
+  hexCodes: string[];
+}
+
+const HexContainer: React.FC<HexCodes> = ({ hexCodes }) => {
   return (
-    <div className={styles.HexContainer}>
-      <HexCell hexCode="#3fbe764" />
-      <HexCell hexCode="#3fbe764" />
-      <HexCell hexCode="#3fbe764" />
-      <HexCell hexCode="#3fbe764" />
+    <div>
+      <HexRow hexCodes={hexCodes} />
+      <HexRow hexCodes={hexCodes} />
+      <HexRow hexCodes={hexCodes} />
     </div>
   );
 };
