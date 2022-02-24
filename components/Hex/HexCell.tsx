@@ -6,7 +6,9 @@ interface HexCellProps {
 }
 
 const HexCell: React.FC<HexCellProps> = ({ hexCode }) => {
-  return <div className={styles.HexCell} style={{ background: hexCode }}></div>;
+  return (
+    <div className={styles.HexCell} style={{ backgroundColor: hexCode }}></div>
+  );
 };
 
 export default HexCell;
