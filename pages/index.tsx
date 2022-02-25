@@ -8,6 +8,7 @@ const Home: NextPage = () => {
     <>
       <div>Home</div>
       <HexContainer hexCodes={hexcodesMock} />
+      <HexContainer hexCodes={hexcodesMock} />
     </>
   );
 };
