@@ -13,7 +13,7 @@ const HexCell: React.FC<HexCellProps> = ({ hexCode }) => {
   const alertOnTextCopied = () => {
     setRenderText(copiedText);
     setTimeout(() => {
-      setRenderText(hexCode);
+      setRenderText(sharpCode);
     }, 1000);
   };
 
