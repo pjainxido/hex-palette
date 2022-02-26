@@ -1,0 +1,14 @@
+@import 'styles/mixin';
+
+.HexRow {
+  display: flex;
+  &:nth-child(odd) {
+    margin-left: 2.6rem;
+  }
+}
+
+.HexContainer {
+  margin: 1rem;
+  padding-bottom: 1.5rem;
+  height: fit-content;
+}
