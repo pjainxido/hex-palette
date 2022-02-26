@@ -1,6 +1,10 @@
 import React from 'react';
 
-const HexPalette = () => {
+interface HexPaletteProps {
+  unparsedHexCode: string;
+}
+
+const HexPalette: React.FC<HexPaletteProps> = ({ unparsedHexCode }) => {
   return <div>index</div>;
 };
 

@@ -6,7 +6,8 @@ interface HexCellProps {
 }
 
 const HexCell: React.FC<HexCellProps> = ({ hexCode }) => {
-  const [renderText, setRenderText] = useState<string>(hexCode);
+  const sharpCode = '#' + hexCode;
+  const [renderText, setRenderText] = useState<string>(sharpCode);
   const copiedText = 'copied!';
 
   const alertOnTextCopied = () => {
@@ -21,9 +22,9 @@ const HexCell: React.FC<HexCellProps> = ({ hexCode }) => {
     navigator.clipboard.writeText(code);
   };
   return (
-    <Cell hexCode={hexCode}>
+    <Cell hexCode={sharpCode}>
       <HexCodeText
-        onClick={() => codeCopyToClipBoard(hexCode)}
+        onClick={() => codeCopyToClipBoard(sharpCode)}
         darken={renderText === copiedText}
       >
         {renderText}
@@ -42,7 +43,7 @@ const HexCodeText = styled.span<IHexCodeText>`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 5rem;
+  width: 80%;
   color: #fff;
   background-color: rgba(0, 0, 0, ${({ darken }) => (darken ? 1 : 0.1)});
   font-size: 0.8rem;
@@ -53,32 +54,61 @@ const HexCodeText = styled.span<IHexCodeText>`
   }
 `;
 
+// const Cell = styled.div<HexCellProps>`
+//   width: 7rem;
+//   height: 3.5rem;
+//   position: relative;
+//   float: left;
+//   background: ${({ hexCode }) => `${hexCode}`};
+//   margin-top: 2.1rem;
+//   margin-bottom: 0.35rem;
+//   margin-right: 0.35rem;
+//   transition: all 0.3s ease;
+//   &:before {
+//     content: '';
+//     position: absolute;
+//     border-bottom: 2.1rem solid ${({ hexCode }) => `${hexCode}`};
+//     border-right: 3.5rem solid transparent;
+//     border-left: 3.5rem solid transparent;
+//     top: -2.1rem;
+//     transition: all 0.3s ease;
+//   }
+//   &:after {
+//     content: '';
+//     position: absolute;
+//     border-top: 2.1rem solid ${({ hexCode }) => `${hexCode}`};
+//     border-right: 3.5rem solid transparent;
+//     border-left: 3.5rem solid transparent;
+//     bottom: -2.1rem;
+//     transition: all 0.3s ease;
+//   }
+// `;
 const Cell = styled.div<HexCellProps>`
-  width: 7rem;
-  height: 3.5rem;
+  width: 5rem;
+  height: 2.5rem;
   position: relative;
   float: left;
   background: ${({ hexCode }) => `${hexCode}`};
-  margin-top: 2.1rem;
-  margin-bottom: 0.35rem;
-  margin-right: 0.35rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+  margin-right: 0.25rem;
   transition: all 0.3s ease;
   &:before {
     content: '';
     position: absolute;
-    border-bottom: 2.1rem solid ${({ hexCode }) => `${hexCode}`};
-    border-right: 3.5rem solid transparent;
-    border-left: 3.5rem solid transparent;
-    top: -2.1rem;
+    border-bottom: 1.5rem solid ${({ hexCode }) => `${hexCode}`};
+    border-right: 2.5rem solid transparent;
+    border-left: 2.5rem solid transparent;
+    top: -1.5rem;
     transition: all 0.3s ease;
   }
   &:after {
     content: '';
     position: absolute;
-    border-top: 2.1rem solid ${({ hexCode }) => `${hexCode}`};
-    border-right: 3.5rem solid transparent;
-    border-left: 3.5rem solid transparent;
-    bottom: -2.1rem;
+    border-top: 1.5rem solid ${({ hexCode }) => `${hexCode}`};
+    border-right: 2.5rem solid transparent;
+    border-left: 2.5rem solid transparent;
+    bottom: -1.5rem;
     transition: all 0.3s ease;
   }
 `;
