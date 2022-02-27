@@ -1,7 +1,11 @@
 import React from 'react';
 
-interface HexPaletteProps {
+export interface HexPaletteProps {
+  id: string;
   unparsedHexCode: string;
+  like: number;
+  createdAt: Date;
+  author: string;
 }
 
 const HexPalette: React.FC<HexPaletteProps> = ({ unparsedHexCode }) => {
