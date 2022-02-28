@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import HexContainer from './HexContainer';
 import { timeForToday } from 'utils/common';
 
@@ -19,9 +18,6 @@ interface HexPaletteProps {
 const HexPalette: React.FC<HexPaletteProps> = ({ palette }) => {
   const { id, unparsedCode, like, createdAt, author } = palette;
   const hexCodeList: string[] = unparsedCode.split('#');
-  useEffect(() => {
-    console.log(hexCodeList);
-  }, []);
 
   return (
     <div className={styles.HexPalette}>
