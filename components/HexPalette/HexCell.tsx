@@ -1,39 +1,51 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 
 interface HexCellProps {
+  label?: string;
+  isLabelCell?: boolean;
+  handleLabel: (code: string) => void;
   hexCode: string;
 }
 
-const HexCell: React.FC<HexCellProps> = ({ hexCode }) => {
+const HexCell: React.FC<HexCellProps> = ({
+  hexCode,
+  isLabelCell = false,
+  label = '',
+  handleLabel,
+}) => {
   const sharpCode = '#' + hexCode;
-  const [renderText, setRenderText] = useState<string>(sharpCode);
   const copiedText = 'copied!';
 
   const alertOnTextCopied = () => {
-    setRenderText(copiedText);
+    handleLabel(copiedText);
     setTimeout(() => {
-      setRenderText(sharpCode);
-    }, 1000);
+      handleLabel(sharpCode);
+    }, 2000);
   };
 
   const codeCopyToClipBoard = (code: string) => {
     alertOnTextCopied();
     navigator.clipboard.writeText(code);
   };
-  return (
-    <Cell hexCode={sharpCode}>
-      <HexCodeText
-        onClick={() => codeCopyToClipBoard(sharpCode)}
-        darken={renderText === copiedText}
-      >
-        {renderText}
+
+  return isLabelCell ? (
+    <LabelCell>
+      <HexCodeText isHover={label !== ''} darken={label === copiedText}>
+        {label}
       </HexCodeText>
-    </Cell>
+    </LabelCell>
+  ) : (
+    <Cell
+      hexCode={sharpCode}
+      onMouseEnter={() => handleLabel(sharpCode)}
+      onMouseLeave={() => handleLabel('')}
+      onClick={() => codeCopyToClipBoard(sharpCode)}
+    />
   );
 };
 
 interface IHexCodeText {
+  isHover: boolean;
   darken: boolean;
 }
 
@@ -47,11 +59,11 @@ const HexCodeText = styled.span<IHexCodeText>`
   color: #fff;
   background-color: rgba(0, 0, 0, ${({ darken }) => (darken ? 1 : 0.1)});
   font-size: 0.8rem;
-  opacity: 0;
+  opacity: ${({ isHover }) => (isHover ? 1 : 0)};
   padding: 0.5rem;
-  &:hover {
+  /* &:hover {
     opacity: 1;
-  }
+  } */
 `;
 
 // const Cell = styled.div<HexCellProps>`
@@ -83,7 +95,42 @@ const HexCodeText = styled.span<IHexCodeText>`
 //     transition: all 0.3s ease;
 //   }
 // `;
-const Cell = styled.div<HexCellProps>`
+
+const LabelCell = styled.div`
+  width: 5rem;
+  height: 2.5rem;
+  position: relative;
+  float: left;
+  background: transparent;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+  margin-right: 0.25rem;
+  transition: all 0.3s ease;
+  &:before {
+    content: '';
+    position: absolute;
+    border-bottom: 1.5rem solid transparent;
+    border-right: 2.5rem solid transparent;
+    border-left: 2.5rem solid transparent;
+    top: -1.5rem;
+    transition: all 0.3s ease;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    border-top: 1.5rem solid transparent;
+    border-right: 2.5rem solid transparent;
+    border-left: 2.5rem solid transparent;
+    bottom: -1.5rem;
+    transition: all 0.3s ease;
+  }
+`;
+
+interface CellProps {
+  hexCode: string;
+}
+
+const Cell = styled.div<CellProps>`
   width: 5rem;
   height: 2.5rem;
   position: relative;
