@@ -29,7 +29,7 @@ const HexCell: React.FC<HexCellProps> = ({
   };
 
   return isLabelCell ? (
-    <LabelCell>
+    <LabelCell hexCode={label}>
       <HexCodeText isHover={label !== ''} darken={label === copiedText}>
         {label}
       </HexCodeText>
@@ -47,6 +47,10 @@ const HexCell: React.FC<HexCellProps> = ({
 interface IHexCodeText {
   isHover: boolean;
   darken: boolean;
+}
+
+interface CellProps {
+  hexCode: string;
 }
 
 const HexCodeText = styled.span<IHexCodeText>`
@@ -96,12 +100,15 @@ const HexCodeText = styled.span<IHexCodeText>`
 //   }
 // `;
 
-const LabelCell = styled.div`
+const LabelCell = styled.div<CellProps>`
   width: 5rem;
   height: 2.5rem;
   position: relative;
   float: left;
-  background: transparent;
+  /* background: transparent; */
+  background: ${({ hexCode }) => {
+    return hexCode !== '' ? hexCode : 'trpansparent';
+  }};
   margin-top: 1.5rem;
   margin-bottom: 0.25rem;
   margin-right: 0.25rem;
@@ -109,7 +116,10 @@ const LabelCell = styled.div`
   &:before {
     content: '';
     position: absolute;
-    border-bottom: 1.5rem solid transparent;
+    border-bottom: 1.5rem solid
+      ${({ hexCode }) => {
+        return hexCode !== '' ? hexCode : 'trpansparent';
+      }};
     border-right: 2.5rem solid transparent;
     border-left: 2.5rem solid transparent;
     top: -1.5rem;
@@ -118,17 +128,17 @@ const LabelCell = styled.div`
   &:after {
     content: '';
     position: absolute;
-    border-top: 1.5rem solid transparent;
+    border-top: 1.5rem solid
+      ${({ hexCode }) => {
+        return hexCode !== '' ? hexCode : 'trpansparent';
+      }};
+    /* border-top: 1.5rem solid transparent; */
     border-right: 2.5rem solid transparent;
     border-left: 2.5rem solid transparent;
     bottom: -1.5rem;
     transition: all 0.3s ease;
   }
 `;
-
-interface CellProps {
-  hexCode: string;
-}
 
 const Cell = styled.div<CellProps>`
   width: 5rem;
