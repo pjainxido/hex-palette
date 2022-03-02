@@ -1,15 +1,14 @@
 import type { NextPage } from 'next';
 
+import PaletteList from 'components/PaletteList';
 import { mockHexPalette } from 'mock';
-import HexPalette from 'components/HexPalette';
+
+const mockList = [mockHexPalette, mockHexPalette, mockHexPalette];
 
 const Home: NextPage = () => {
   return (
     <>
-      <HexPalette palette={mockHexPalette} />
-      <HexPalette palette={mockHexPalette} />
-      <HexPalette palette={mockHexPalette} />
-      <HexPalette palette={mockHexPalette} />
+      <PaletteList contents={mockList} />
     </>
   );
 };
