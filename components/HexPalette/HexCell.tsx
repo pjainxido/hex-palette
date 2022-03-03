@@ -18,9 +18,6 @@ const HexCell: React.FC<HexCellProps> = ({
 
   const alertOnTextCopied = () => {
     handleLabel(copiedText);
-    setTimeout(() => {
-      handleLabel(sharpCode);
-    }, 2000);
   };
 
   const codeCopyToClipBoard = (code: string) => {
@@ -29,7 +26,7 @@ const HexCell: React.FC<HexCellProps> = ({
   };
 
   return isLabelCell ? (
-    <LabelCell hexCode={label}>
+    <LabelCell hexCode={label === copiedText ? 'transparent' : label}>
       <HexCodeText isHover={label !== ''} darken={label === copiedText}>
         {label}
       </HexCodeText>
@@ -65,47 +62,13 @@ const HexCodeText = styled.span<IHexCodeText>`
   font-size: 0.8rem;
   opacity: ${({ isHover }) => (isHover ? 1 : 0)};
   padding: 0.5rem;
-  /* &:hover {
-    opacity: 1;
-  } */
 `;
-
-// const Cell = styled.div<HexCellProps>`
-//   width: 7rem;
-//   height: 3.5rem;
-//   position: relative;
-//   float: left;
-//   background: ${({ hexCode }) => `${hexCode}`};
-//   margin-top: 2.1rem;
-//   margin-bottom: 0.35rem;
-//   margin-right: 0.35rem;
-//   transition: all 0.3s ease;
-//   &:before {
-//     content: '';
-//     position: absolute;
-//     border-bottom: 2.1rem solid ${({ hexCode }) => `${hexCode}`};
-//     border-right: 3.5rem solid transparent;
-//     border-left: 3.5rem solid transparent;
-//     top: -2.1rem;
-//     transition: all 0.3s ease;
-//   }
-//   &:after {
-//     content: '';
-//     position: absolute;
-//     border-top: 2.1rem solid ${({ hexCode }) => `${hexCode}`};
-//     border-right: 3.5rem solid transparent;
-//     border-left: 3.5rem solid transparent;
-//     bottom: -2.1rem;
-//     transition: all 0.3s ease;
-//   }
-// `;
 
 const LabelCell = styled.div<CellProps>`
   width: 5rem;
   height: 2.5rem;
   position: relative;
   float: left;
-  /* background: transparent; */
   background: ${({ hexCode }) => {
     return hexCode !== '' ? hexCode : 'trpansparent';
   }};
@@ -118,7 +81,7 @@ const LabelCell = styled.div<CellProps>`
     position: absolute;
     border-bottom: 1.5rem solid
       ${({ hexCode }) => {
-        return hexCode !== '' ? hexCode : 'trpansparent';
+        return hexCode !== '' ? hexCode : '#fff';
       }};
     border-right: 2.5rem solid transparent;
     border-left: 2.5rem solid transparent;
@@ -130,9 +93,8 @@ const LabelCell = styled.div<CellProps>`
     position: absolute;
     border-top: 1.5rem solid
       ${({ hexCode }) => {
-        return hexCode !== '' ? hexCode : 'trpansparent';
+        return hexCode !== '' ? hexCode : '#fff';
       }};
-    /* border-top: 1.5rem solid transparent; */
     border-right: 2.5rem solid transparent;
     border-left: 2.5rem solid transparent;
     bottom: -1.5rem;

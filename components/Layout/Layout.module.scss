@@ -1,10 +1,11 @@
 @import 'styles/mixin.scss';
 
 .mainWrapper {
-  margin-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 50px;
+  max-width: 1700px;
 }
 
 .pageContent {
