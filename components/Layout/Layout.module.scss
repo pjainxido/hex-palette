@@ -1,6 +1,22 @@
+@import 'styles/mixin.scss';
+
 .mainWrapper {
-  margin-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 50px;
+  max-width: 1700px;
+}
+
+.pageContent {
+  @include mobile {
+    padding: 0 4px;
+    width: 100%;
+  }
+  @include laptop {
+    width: 80%;
+  }
+  @include desktop {
+    width: 80%;
+  }
 }

@@ -14,7 +14,27 @@
 }
 
 .HexPalette {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  .header {
+    .title {
+      a {
+        font-size: 1.2rem;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
   .footer {
     display: flex;
+    justify-content: space-between;
+    .like {
+    }
+    .date {
+    }
   }
 }

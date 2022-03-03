@@ -17,5 +17,19 @@ export const mockHexPalette: HexPaletteType = {
   unparsedCode: unparsedHexCodeMock,
   like: 1004,
   createdAt: new Date(2020, 3, 1),
-  author: 'asdfasdf',
+  title: 'looooooooooooooooooooongtitle',
 };
+
+export const mockPaletteList: HexPaletteType[] = [
+  mockHexPalette,
+  mockHexPalette,
+  mockHexPalette,
+  mockHexPalette,
+  mockHexPalette,
+  mockHexPalette,
+  mockHexPalette,
+  mockHexPalette,
+  mockHexPalette,
+  mockHexPalette,
+  mockHexPalette,
+];
