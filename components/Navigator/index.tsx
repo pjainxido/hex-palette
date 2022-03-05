@@ -11,7 +11,7 @@ const Navigator = () => {
             query: { q: 'new' },
           }}
         >
-          New
+          <a>New</a>
         </Link>
         <Link
           href={{
@@ -19,7 +19,7 @@ const Navigator = () => {
             query: { q: 'hot' },
           }}
         >
-          Hot
+          <a>Hot</a>
         </Link>
         <Link
           href={{
@@ -27,9 +27,11 @@ const Navigator = () => {
             query: { q: 'random' },
           }}
         >
-          Random
+          <a>Random</a>
         </Link>
-        <Link href={'/like'}>Like</Link>
+        <Link href={'/like'}>
+          <a>Like</a>
+        </Link>
       </div>
       <div className={styles.tags}></div>
     </nav>
