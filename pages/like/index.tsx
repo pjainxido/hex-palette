@@ -1,5 +1,9 @@
 const LikePage = () => {
-  return <div>liked</div>;
+  return (
+    <>
+      <div>liked</div>
+    </>
+  );
 };
 
 export default LikePage;

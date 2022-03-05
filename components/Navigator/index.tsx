@@ -32,6 +32,9 @@ const Navigator = () => {
         <Link href={'/like'}>
           <a>Like</a>
         </Link>
+        <Link href={'/create'}>
+          <a>Create</a>
+        </Link>
       </div>
       <div className={styles.tags}></div>
     </nav>

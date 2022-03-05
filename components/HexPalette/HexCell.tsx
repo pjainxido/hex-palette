@@ -50,7 +50,7 @@ interface CellProps {
   hexCode: string;
 }
 
-const HexCodeText = styled.span<IHexCodeText>`
+export const HexCodeText = styled.span<IHexCodeText>`
   position: absolute;
   text-align: center;
   left: 50%;
@@ -64,7 +64,7 @@ const HexCodeText = styled.span<IHexCodeText>`
   padding: 0.5rem;
 `;
 
-const LabelCell = styled.div<CellProps>`
+export const LabelCell = styled.div<CellProps>`
   width: 5rem;
   height: 2.5rem;
   position: relative;
@@ -102,7 +102,7 @@ const LabelCell = styled.div<CellProps>`
   }
 `;
 
-const Cell = styled.div<CellProps>`
+export const Cell = styled.div<CellProps>`
   width: 5rem;
   height: 2.5rem;
   position: relative;
@@ -128,6 +128,40 @@ const Cell = styled.div<CellProps>`
     border-right: 2.5rem solid transparent;
     border-left: 2.5rem solid transparent;
     bottom: -1.5rem;
+    transition: all 0.3s ease;
+  }
+`;
+
+interface CustomCellProps extends CellProps {
+  size: number;
+}
+
+const CustomCell = styled.div<CustomCellProps>`
+  width: 100px;
+  height: 50px;
+  position: relative;
+  float: left;
+  background: ${({ hexCode }) => `${hexCode}`};
+  margin-top: 30px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+  &:before {
+    content: '';
+    position: absolute;
+    border-bottom: 30px solid ${({ hexCode }) => `${hexCode}`};
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+    top: -30px;
+    transition: all 0.3s ease;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    border-top: 30px solid ${({ hexCode }) => `${hexCode}`};
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+    bottom: -30px;
     transition: all 0.3s ease;
   }
 `;
