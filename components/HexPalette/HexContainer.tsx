@@ -1,40 +1,63 @@
-import { useState } from 'react';
-import HexCell from './HexCell';
+import { useEffect, useState } from 'react';
+import LabelCell from './Cell/LabelCell';
+import HexCell, { Cell } from './Cell/HexCell';
 import styles from './Hex.module.scss';
 
 export interface HexCodes {
   hexCodes: string[];
 }
 
-interface IHexRow extends HexCodes {
+interface IHexRow extends IHexContainer {
   handleLabel: (code: string) => void;
-  isLabelRow?: boolean;
+  hexIndex: number[];
   label?: string;
+}
+
+interface IHexContainer extends HexCodes {
+  selectCell?: (targetIndex: number) => void;
 }
 
 const HexRow: React.FC<IHexRow> = ({
   hexCodes,
-  isLabelRow = false,
+  hexIndex,
   label,
+  selectCell,
   handleLabel,
 }) => {
+  useEffect(() => {
+    console.log(label);
+  }, [label]);
   return hexCodes ? (
     <div className={styles.HexRow}>
-      {isLabelRow ? (
+      {label !== undefined ? (
         <>
-          <HexCell hexCode={hexCodes[0]} key={0} handleLabel={handleLabel} />
           <HexCell
-            isLabelCell
-            hexCode={hexCodes[1]}
-            label={label}
+            cellIndex={hexIndex[0]}
+            hexCode={hexCodes[0]}
+            key={0}
             handleLabel={handleLabel}
+            selectCell={selectCell}
           />
-          <HexCell hexCode={hexCodes[1]} key={1} handleLabel={handleLabel} />
+          <LabelCell label={label} />
+          <HexCell
+            cellIndex={hexIndex[1]}
+            hexCode={hexCodes[1]}
+            key={1}
+            handleLabel={handleLabel}
+            selectCell={selectCell}
+          />
         </>
       ) : (
         hexCodes.map((code, index) => {
+          console.log(hexIndex[index]);
           return (
-            <HexCell hexCode={code} key={index} handleLabel={handleLabel} />
+            <HexCell
+              cellIndex={hexIndex[index]}
+              hexCode={code}
+              key={index}
+              handleLabel={handleLabel}
+              selectCell={selectCell}
+            />
           );
         })
       )}
@@ -42,7 +65,7 @@ const HexRow: React.FC<IHexRow> = ({
   ) : null;
 };
 
-const HexContainer: React.FC<HexCodes> = ({ hexCodes }) => {
+const HexContainer: React.FC<IHexContainer> = ({ hexCodes, selectCell }) => {
   const [label, setLabel] = useState<string>('');
   const handleLabel = (code: string) => {
     setLabel(code);
@@ -51,17 +74,22 @@ const HexContainer: React.FC<HexCodes> = ({ hexCodes }) => {
     <div className={styles.HexContainer}>
       <HexRow
         hexCodes={hexCodes.filter((_, index) => index < 2)}
+        hexIndex={[0, 1]}
         handleLabel={handleLabel}
+        selectCell={selectCell}
       />
       <HexRow
-        isLabelRow
         hexCodes={hexCodes.filter((_, index) => index >= 2 && index < 4)}
         label={label}
+        hexIndex={[2, 3]}
         handleLabel={handleLabel}
+        selectCell={selectCell}
       />
       <HexRow
         hexCodes={hexCodes.filter((_, index) => index >= 4)}
+        hexIndex={[4, 5]}
         handleLabel={handleLabel}
+        selectCell={selectCell}
       />
     </div>
   );

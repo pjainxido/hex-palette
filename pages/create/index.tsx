@@ -1,5 +1,10 @@
+import EditPalette from 'components/HexPalette/EditPalette';
 const CreatePage = () => {
-  return <div>index</div>;
+  return (
+    <div>
+      <EditPalette />
+    </div>
+  );
 };
 
 export default CreatePage;
