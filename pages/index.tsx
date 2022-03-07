@@ -5,9 +5,9 @@ import { mockPaletteList } from 'mock';
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div>
       <PaletteList contents={mockPaletteList} />
-    </>
+    </div>
   );
 };
 

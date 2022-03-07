@@ -18,7 +18,9 @@ interface HexPaletteProps {
 
 const HexPalette: React.FC<HexPaletteProps> = ({ palette }) => {
   const { id, unparsedCode, like, createdAt, title } = palette;
-  const hexCodeList: string[] = unparsedCode.split('#');
+  const hexCodeList: string[] = unparsedCode
+    .split('#')
+    .map((code) => '#' + code);
 
   return (
     <div className={styles.HexPalette}>

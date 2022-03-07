@@ -2,9 +2,9 @@
 .Navigator {
   height: calc(100vh - 90px);
   min-width: 10rem;
-  // overflow-y: scroll;
+  overflow-y: scroll;
   position: sticky;
-  top: 4rem;
+  top: 50px;
   padding: 0 1rem;
 
   @include mobile {
