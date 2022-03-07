@@ -49,6 +49,7 @@ const editPaletteReducer = (
 
       return {
         ...state,
+        pickerColor: hexCode,
       };
   }
 };
