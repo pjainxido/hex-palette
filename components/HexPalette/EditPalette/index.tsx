@@ -13,7 +13,6 @@ const EditPalette = () => {
   const localStoargeKey = 'savedCodes';
   useEffect(() => {
     const localCodes = window.localStorage.getItem(localStoargeKey);
-    // console.log(typeof localCodes);
     if (localCodes) {
       dispatch({ type: 'LOAD_PALETTE', hexCodes: localCodes.split(',') });
     }

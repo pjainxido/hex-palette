@@ -52,14 +52,12 @@ const editPaletteReducer = (
       };
     case 'HANDLE_PICKER':
       const { hexCode } = action;
-      // state.hexCodes.splice(state.targetIndex, 1, hexCode);
-
       return {
         ...state,
         hexCodes: [
-          ...state.hexCodes.map((item, index) => {
-            return index === state.targetIndex ? hexCode : item;
-          }),
+          ...state.hexCodes.map((item, index) =>
+            index === state.targetIndex ? hexCode : item
+          ),
         ],
         pickerColor: hexCode,
       };
