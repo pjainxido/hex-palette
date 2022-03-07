@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import LabelCell from './Cell/LabelCell';
-import HexCell, { Cell } from './Cell/HexCell';
+import HexCell from './Cell/HexCell';
 import styles from './Hex.module.scss';
 
 export interface HexCodes {
@@ -24,9 +24,6 @@ const HexRow: React.FC<IHexRow> = ({
   selectCell,
   handleLabel,
 }) => {
-  useEffect(() => {
-    console.log(label);
-  }, [label]);
   return hexCodes ? (
     <div className={styles.HexRow}>
       {label !== undefined ? (
@@ -49,7 +46,6 @@ const HexRow: React.FC<IHexRow> = ({
         </>
       ) : (
         hexCodes.map((code, index) => {
-          console.log(hexIndex[index]);
           return (
             <HexCell
               cellIndex={hexIndex[index]}
