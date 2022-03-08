@@ -2,10 +2,15 @@
   width: 100%;
   margin: 0 auto;
   position: fixed;
+  height: fit-content;
   top: 0;
   left: 0;
   z-index: 1;
   background: #fff;
   padding: 10px 0;
   border: 1px solid #ececec;
+  .logo {
+    font-size: 1.7rem;
+    font-family: 'Baloo Bhai 2', cursive;
+  }
 }
