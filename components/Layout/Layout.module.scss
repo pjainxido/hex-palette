@@ -1,11 +1,12 @@
 @import 'styles/mixin.scss';
 
 .mainWrapper {
+  position: relative;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 50px;
+  margin-top: 70px;
   max-width: 1700px;
 }
 

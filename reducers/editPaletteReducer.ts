@@ -22,6 +22,7 @@ const initialPaletteState: EditPaletteState = {
 };
 
 type EditPaletteAction =
+  | { type: 'LOAD_PALETTE'; hexCodes: string[] }
   | { type: 'SELECT_PALETTE'; target: number }
   | { type: 'CLOSE_PICKER' }
   | { type: 'HANDLE_PICKER'; hexCode: string };
@@ -31,6 +32,12 @@ const editPaletteReducer = (
   action: EditPaletteAction
 ): EditPaletteState => {
   switch (action.type) {
+    case 'LOAD_PALETTE':
+      return {
+        ...state,
+        hexCodes: [...action.hexCodes],
+      };
+
     case 'SELECT_PALETTE':
       return {
         ...state,
@@ -45,10 +52,14 @@ const editPaletteReducer = (
       };
     case 'HANDLE_PICKER':
       const { hexCode } = action;
-      state.hexCodes.splice(state.targetIndex, 1, hexCode);
-
       return {
         ...state,
+        hexCodes: [
+          ...state.hexCodes.map((item, index) =>
+            index === state.targetIndex ? hexCode : item
+          ),
+        ],
+        pickerColor: hexCode,
       };
   }
 };
