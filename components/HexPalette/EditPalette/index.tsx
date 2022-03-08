@@ -1,14 +1,22 @@
-import { useEffect, useReducer } from 'react';
+import { useEffect, useReducer, useRef } from 'react';
 import HexContainer from '../HexContainer';
 import { HexColorPicker, HexColorInput } from 'react-colorful';
 import {
   initialPaletteState,
   editPaletteReducer,
 } from 'reducers/editPaletteReducer';
+import useDetectClickOutside from 'hooks/useDetectClickOutside';
+
+import styles from './EditPalette.module.scss';
 
 const EditPalette = () => {
   const [state, dispatch] = useReducer(editPaletteReducer, initialPaletteState);
   const { hexCodes, onPicker, pickerColor } = state;
+  const picker = useRef<HTMLDivElement>(null);
+  useDetectClickOutside(picker, () => {
+    console.log('ee');
+    dispatch({ type: 'CLOSE_PICKER' });
+  });
 
   const localStoargeKey = 'savedCodes';
   useEffect(() => {
@@ -31,13 +39,17 @@ const EditPalette = () => {
   }, [hexCodes]);
 
   return (
-    <div>
+    <div className={styles.EditPalette}>
       <HexContainer hexCodes={hexCodes} selectCell={selectCell} />
       {onPicker && (
-        <>
+        <div className={styles.Picker} ref={picker}>
           <HexColorPicker color={pickerColor} onChange={handlePicker} />
-          <HexColorInput color={pickerColor} onChange={handlePicker} />
-        </>
+          <HexColorInput
+            className={styles.Input}
+            color={pickerColor}
+            onChange={handlePicker}
+          />
+        </div>
       )}
     </div>
   );
