@@ -2,7 +2,7 @@ import { RefObject, useEffect } from 'react';
 
 export default function useDetectClickOutside(
   ref: RefObject<HTMLDivElement>,
-  onClickOutside: any
+  onClickOutside: () => void
 ) {
   const handleClickOutside = ({ target }: MouseEvent) => {
     if (ref.current && !ref.current.contains(target as Node)) {

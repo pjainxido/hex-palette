@@ -45,7 +45,7 @@ const EditPalette = () => {
         <div className={styles.Picker} ref={picker}>
           <HexColorPicker color={pickerColor} onChange={handlePicker} />
           <HexColorInput
-            className={styles.Input}
+            className={styles.colorInput}
             color={pickerColor}
             onChange={handlePicker}
           />
