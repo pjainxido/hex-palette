@@ -4,7 +4,7 @@
   min-width: 10rem;
   overflow-y: scroll;
   position: sticky;
-  top: 50px;
+  top: 70px;
   padding: 0 1rem;
 
   @include mobile {
@@ -24,7 +24,8 @@
     }
   }
   a {
-    font-size: 17px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 1.2rem;
     opacity: 0.8;
     margin-bottom: 6px;
     border: 0;

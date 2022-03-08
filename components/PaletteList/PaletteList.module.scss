@@ -1,5 +1,6 @@
 @import 'styles/mixin';
 .PaletteList {
+  padding-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   @include mobile {
