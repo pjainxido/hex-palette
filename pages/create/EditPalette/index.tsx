@@ -1,5 +1,5 @@
 import { useEffect, useReducer, useRef } from 'react';
-import HexContainer from '../HexContainer';
+import HexContainer from '../../../components/HexPalette/HexContainer';
 import { HexColorPicker, HexColorInput } from 'react-colorful';
 import {
   initialPaletteState,
@@ -14,7 +14,6 @@ const EditPalette = () => {
   const { hexCodes, onPicker, pickerColor } = state;
   const picker = useRef<HTMLDivElement>(null);
   useDetectClickOutside(picker, () => {
-    console.log('ee');
     dispatch({ type: 'CLOSE_PICKER' });
   });
 

@@ -1,6 +1,5 @@
-import Header from 'components/Header';
-import Navigator from 'components/Navigator';
-import React from 'react';
+import Header from './Header';
+import Navigator from './Navigator';
 import styles from './Layout.module.scss';
 
 const Layout: React.FC = ({ children }) => {

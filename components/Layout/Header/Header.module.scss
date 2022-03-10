@@ -1,4 +1,7 @@
 .Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin: 0 auto;
   position: fixed;
@@ -9,8 +12,11 @@
   background: #fff;
   padding: 10px 0;
   border: 1px solid #ececec;
-  .logo {
-    font-size: 1.7rem;
-    font-family: 'Baloo Bhai 2', cursive;
+  .left {
+    padding: 0 1rem;
+    .logo {
+      font-size: 1.7rem;
+      font-family: 'Baloo Bhai 2', cursive;
+    }
   }
 }
