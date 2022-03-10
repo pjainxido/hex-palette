@@ -1,0 +1,24 @@
+.Filter {
+  position: relative;
+  width: 100%;
+  overflow-x: clip;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.DropDownFilter {
+  position: absolute;
+  border-radius: 0 0 10px 10px;
+  transition: all 0.2s;
+  transform-origin: top;
+  z-index: 2;
+  width: calc(100% - 20px);
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 10px;
+  background: #fff;
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  box-shadow: 0 10px 20px 0 rgb(0 0 0 /5%);
+}

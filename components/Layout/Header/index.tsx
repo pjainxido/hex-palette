@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import FilterContainer from './FilterContainer';
+import Filter from './Filter';
 import styles from './Header.module.scss';
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
         </div>
       </div>
       <div className={styles.middle}>
-        <FilterContainer />
+        <Filter />
       </div>
       <div className={styles.right}>right</div>
     </div>
