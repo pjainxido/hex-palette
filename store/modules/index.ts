@@ -22,7 +22,7 @@ const rootReducer = (
       const combineReducer = combineReducers({
         filterReducer,
       });
-      return combineReducer(state, action.tag);
+      return combineReducer(state, action);
     }
   }
 };
