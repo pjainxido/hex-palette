@@ -1,4 +1,4 @@
-const getTimeDiff = (value: Date, todayValue?: Date): string => {
+const getTimeDiff = (value: Date | string, todayValue?: Date): string => {
   const today = todayValue || new Date();
   const timeValue = new Date(value);
 
