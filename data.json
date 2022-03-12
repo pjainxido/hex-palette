@@ -1,4 +1,50 @@
 {
+  "tags": [
+    {
+      "label": "Blue",
+      "hexcode": "#4073FF"
+    },
+    {
+      "label": "Green",
+      "hexcode": "#7ECC49"
+    },
+    {
+      "label": "Red",
+      "hexcode": "#DB4035"
+    },
+    {
+      "label": "Pink",
+      "hexcode": "#EB97EB"
+    },
+    {
+      "label": "Black",
+      "hexcode": "#333333"
+    },
+    {
+      "label": "Yellow",
+      "hexcode": "#FAD000"
+    },
+    {
+      "label": "Grey",
+      "hexcode": "#B8B8B8"
+    },
+    {
+      "label": "Orange",
+      "hexcode": "#FF9933"
+    },
+    {
+      "label": "White",
+      "hexcode": "#FFFFFF"
+    },
+    {
+      "label": "Purple",
+      "hexcode": "#AF38EB"
+    },
+    {
+      "label": "Navy",
+      "hexcode": "#414796"
+    }
+  ],
   "palettes": [
     {
       "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
