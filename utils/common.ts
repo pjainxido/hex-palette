@@ -1,6 +1,8 @@
-const getTimeDiff = (value: Date, todayValue?: Date): string => {
+const getTimeDiff = (value: Date | string, todayValue?: Date): string => {
   const today = todayValue || new Date();
+  console.log(value);
   const timeValue = new Date(value);
+  console.log(timeValue);
 
   const timeDiff = Math.floor(
     (today.getTime() - timeValue.getTime()) / 1000 / 60
