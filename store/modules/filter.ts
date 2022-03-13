@@ -2,6 +2,7 @@
 const RESET = 'filter/RESET_TAG' as const;
 const ADD_TAG = 'filter/ADD_TAG' as const;
 const REMOVE_TAG = 'filter/REMOVE_TAG' as const;
+const CHANGE_TITLE = 'filter/CHANGE_TITLE' as const;
 
 export const reset = () => ({ type: RESET });
 
@@ -10,13 +11,18 @@ export const addTag = (tag: string) => ({
   tag: tag,
 });
 
+export const changeTitle = (title: string) => ({
+  type: CHANGE_TITLE,
+  title: title,
+});
+
 export const removeTag = (tag: string) => ({
   type: REMOVE_TAG,
   tag: tag,
 });
 
 export type FilterAction = ReturnType<
-  typeof addTag | typeof removeTag | typeof reset
+  typeof addTag | typeof removeTag | typeof reset | typeof changeTitle
 >;
 
 //REDUCERS
@@ -49,7 +55,11 @@ const filterReducer = (
         ...state,
         tags: [...state.tags.filter((tag) => tag !== action.tag)],
       };
-
+    case CHANGE_TITLE:
+      return {
+        ...state,
+        title: action.title,
+      };
     default:
       return state;
   }
