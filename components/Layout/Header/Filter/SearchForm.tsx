@@ -1,4 +1,3 @@
-import { ChangeEventHandler } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeTitle } from 'store/modules/filter';
 import styles from './Filter.module.scss';

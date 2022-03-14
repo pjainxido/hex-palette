@@ -1,3 +1,5 @@
+import { TimeFrame } from 'store/modules/filter';
+
 const getTimeDiff = (value: Date | string, todayValue?: Date): string => {
   const today = todayValue || new Date();
   const timeValue = new Date(value);
@@ -27,4 +29,26 @@ const getTimeDiff = (value: Date | string, todayValue?: Date): string => {
   return `${Math.floor(years)}년 전`;
 };
 
-export { getTimeDiff };
+const checkDateOnRange = (value: Date | string, option: TimeFrame) => {
+  const inputDate = new Date(value);
+  const today = new Date();
+
+  switch (option) {
+    case 'day':
+      today.setDate(today.getDate() - 1);
+      return inputDate > today;
+    case 'week':
+      today.setDate(today.getDate() - 7);
+      return inputDate > today;
+    case 'month':
+      today.setMonth(today.getMonth() - 1);
+      return inputDate > today;
+    case 'year':
+      today.setFullYear(today.getFullYear() - 1);
+      return inputDate > today;
+    default:
+      return true;
+  }
+};
+
+export { getTimeDiff, checkDateOnRange };
