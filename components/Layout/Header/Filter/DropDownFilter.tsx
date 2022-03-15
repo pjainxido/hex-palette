@@ -1,11 +1,15 @@
+import ColorTag from 'components/Tag/ColorTag';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from 'store/modules';
 import {
+  addTag,
   changeSort,
   changeTimeFrame,
+  removeTag,
   SortOption,
   TimeFrame,
 } from 'store/modules/filter';
+import { colorTagList } from '.';
 
 import styles from './Filter.module.scss';
 
@@ -15,6 +19,30 @@ interface IFilterLabel {
   label: string;
 }
 
+interface ITagFilter extends IFilterLabel {
+  unActiveFilter: () => void;
+}
+
+interface IColorTagFilter extends ITagFilter {
+  hexCode: string;
+}
+
+const ColorTagFilter: React.FC<IColorTagFilter> = ({
+  isActive,
+  activeFilter,
+  unActiveFilter,
+  hexCode,
+  label,
+}) => {
+  return (
+    <ColorTag
+      onClick={() => (isActive ? unActiveFilter() : activeFilter())}
+      hexCode={hexCode}
+      label={label}
+    />
+  );
+};
+
 const FilterLabel: React.FC<IFilterLabel> = ({
   isActive,
   label,
@@ -23,6 +51,20 @@ const FilterLabel: React.FC<IFilterLabel> = ({
   return (
     <div className={styles.FilterLabel} onClick={() => activeFilter()}>
       <div className={isActive ? styles.active : styles.unActive}>{label}</div>
+    </div>
+  );
+};
+
+interface IDropDownSection {
+  title: string;
+  children: React.ReactNode;
+}
+
+const DropDownSection = ({ title, children }: IDropDownSection) => {
+  return (
+    <div className={styles.section}>
+      <div className={styles.title}>{title}</div>
+      {children}
     </div>
   );
 };
@@ -40,10 +82,17 @@ const DropDownFilter = () => {
     dispatch(changeTimeFrame(timeFrame));
   };
 
+  const activeTag = (tag: string) => {
+    dispatch(addTag(tag));
+  };
+
+  const unActiveTag = (tag: string) => {
+    dispatch(removeTag(tag));
+  };
+
   return (
     <div className={styles.DropDownFilter}>
-      <div className={styles.section}>
-        <div className={styles.title}>Sort</div>
+      <DropDownSection title="Sort">
         <FilterLabel
           activeFilter={() => handleSortOption('new')}
           isActive={sort === 'new'}
@@ -64,9 +113,8 @@ const DropDownFilter = () => {
           isActive={sort === 'old'}
           label="Old"
         />
-      </div>
-      <div className={styles.section}>
-        <div className={styles.title}>TimeFrame</div>
+      </DropDownSection>
+      <DropDownSection title="TimeFrame">
         <FilterLabel
           activeFilter={() => handleTimeFrameFilter(null)}
           isActive={timeFrame === null}
@@ -92,13 +140,19 @@ const DropDownFilter = () => {
           isActive={timeFrame === 'year'}
           label="Year"
         />
-      </div>
-      <div className={styles.section}>
-        <div className={styles.title}>Tag</div>
-      </div>
-      <div className={styles.section}>
-        <div className={styles.title}>ColorTag</div>
-      </div>
+      </DropDownSection>
+      <DropDownSection title="ColorTag">
+        {colorTagList.map(({ label, hexCode }, index) => (
+          <ColorTagFilter
+            label={label}
+            key={index}
+            isActive={tags.includes(label)}
+            hexCode={hexCode}
+            activeFilter={() => activeTag(label)}
+            unActiveFilter={() => unActiveTag(label)}
+          />
+        ))}
+      </DropDownSection>
     </div>
   );
 };

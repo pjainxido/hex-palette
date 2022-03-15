@@ -5,7 +5,7 @@ type EditPaletteState = {
   pickerColor: string;
 };
 
-const defaultHexCodes: string[] = [
+const defaulthexCodes: string[] = [
   '#999999',
   '#aaaaaa',
   '#bbbbbb',
@@ -15,7 +15,7 @@ const defaultHexCodes: string[] = [
 ];
 
 const initialPaletteState: EditPaletteState = {
-  hexCodes: defaultHexCodes,
+  hexCodes: defaulthexCodes,
   onPicker: false,
   targetIndex: 0,
   pickerColor: 'ffffff',

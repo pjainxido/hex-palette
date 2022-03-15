@@ -1,6 +1,6 @@
 import { HexPaletteType } from 'components/HexPalette';
 
-export const hexcodesMock: string[] = [
+export const hexCodesMock: string[] = [
   'F7F7F7',
   'FFB72B',
   'FFE61B',
@@ -10,11 +10,11 @@ export const hexcodesMock: string[] = [
   'FFE61B',
 ];
 
-export const unparsedHexCodeMock = 'F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B';
+export const unparsedhexCodeMock = 'F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B';
 
 export const mockHexPalette: HexPaletteType = {
   id: '1',
-  hexcodes: unparsedHexCodeMock,
+  hexCodes: unparsedhexCodeMock,
   like: 1004,
   createdAt: new Date(2020, 3, 1),
   title: 'looooooooooooooooooooongtitle',

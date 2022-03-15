@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export type HexPaletteType = {
   id: string;
-  hexcodes: string;
+  hexCodes: string;
   like: number;
   createdAt: Date;
   title: string;
@@ -18,8 +18,8 @@ interface HexPaletteProps {
 }
 
 const HexPalette: React.FC<HexPaletteProps> = ({ palette }) => {
-  const { id, hexcodes, like, createdAt, title } = palette;
-  const hexCodeList: string[] = hexcodes.split('#').map((code) => '#' + code);
+  const { id, hexCodes, like, createdAt, title } = palette;
+  const hexCodeList: string[] = hexCodes.split('#').map((code) => '#' + code);
 
   return (
     <div className={styles.HexPalette}>
