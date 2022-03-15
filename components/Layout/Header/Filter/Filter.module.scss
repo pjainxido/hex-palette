@@ -21,6 +21,37 @@
   border: 1px solid #ececec;
   box-sizing: border-box;
   box-shadow: 0 10px 20px 0 rgb(0 0 0 /5%);
+  .section {
+    padding: 1rem;
+    .title {
+    }
+  }
+}
+
+.SearchForm {
+  display: flex;
+  border: 1px solid #ececec;
+  border-radius: 40px;
+  height: 38px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-width: 100%;
+  .Input {
+    border: 0;
+    background: 0 0;
+    height: 100%;
+    padding-left: 34px;
+    transition: all 0.2s;
+    animation-name: fade;
+    animation-duration: 0.3s;
+    animation-delay: 0.1s;
+    width: 100%;
+    font-family: poppins, sans-serif;
+    padding-left: 16px;
+    flex-shrink: initial;
+    border-radius: 40px;
+  }
 }
 
 .FilterLabel {
