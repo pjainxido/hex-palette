@@ -6,6 +6,7 @@ interface IColorTag {
   hexCode: string;
   onClick?: () => void;
   onClose?: (label: string) => void;
+  background?: string;
 }
 
 const ColorTag: React.FC<IColorTag> = ({
@@ -13,9 +14,14 @@ const ColorTag: React.FC<IColorTag> = ({
   hexCode,
   onClose,
   onClick,
+  background,
 }) => {
   return (
-    <div className={styles.Tag} onClick={onClick}>
+    <div
+      className={styles.Tag}
+      onClick={onClick}
+      style={{ background: background }}
+    >
       <div className={styles.colorDot} style={{ background: hexCode }} />
       {label}
       {onClose && <label className={styles.closeLabel}></label>}

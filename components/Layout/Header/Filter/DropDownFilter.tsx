@@ -39,6 +39,7 @@ const ColorTagFilter: React.FC<IColorTagFilter> = ({
       onClick={() => (isActive ? unActiveFilter() : activeFilter())}
       hexCode={hexCode}
       label={label}
+      background={isActive ? '#ececec' : undefined}
     />
   );
 };
