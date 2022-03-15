@@ -1,53 +1,7 @@
 {
-  "tags": [
-    {
-      "label": "Blue",
-      "hexcode": "#4073FF"
-    },
-    {
-      "label": "Green",
-      "hexcode": "#7ECC49"
-    },
-    {
-      "label": "Red",
-      "hexcode": "#DB4035"
-    },
-    {
-      "label": "Pink",
-      "hexcode": "#EB97EB"
-    },
-    {
-      "label": "Black",
-      "hexcode": "#333333"
-    },
-    {
-      "label": "Yellow",
-      "hexcode": "#FAD000"
-    },
-    {
-      "label": "Grey",
-      "hexcode": "#B8B8B8"
-    },
-    {
-      "label": "Orange",
-      "hexcode": "#FF9933"
-    },
-    {
-      "label": "White",
-      "hexcode": "#FFFFFF"
-    },
-    {
-      "label": "Purple",
-      "hexcode": "#AF38EB"
-    },
-    {
-      "label": "Navy",
-      "hexcode": "#414796"
-    }
-  ],
   "palettes": [
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 1,
       "title": "Princesas",
       "like": 83,
@@ -55,7 +9,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 2,
       "title": "Feast",
       "like": 9,
@@ -63,7 +17,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 3,
       "title": "Yertle the Turtle and Other Stories",
       "like": 66,
@@ -71,7 +25,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 4,
       "title": "Sweet Sixteen",
       "like": 80,
@@ -79,7 +33,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 5,
       "title": "Gen 13 (a.k.a. Gen13: The Animated Movie)",
       "like": 59,
@@ -87,7 +41,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 6,
       "title": "Sour Grapes",
       "like": 11,
@@ -95,7 +49,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 7,
       "title": "Tin Men",
       "like": 94,
@@ -103,7 +57,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 8,
       "title": "Stuart Little 3: Call of the Wild",
       "like": 63,
@@ -111,7 +65,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 9,
       "title": "Fantastic Voyage",
       "like": 87,
@@ -119,7 +73,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 10,
       "title": "Cinderella",
       "like": 72,
@@ -127,7 +81,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 11,
       "title": "Some Kind of Wonderful",
       "like": 58,
@@ -135,7 +89,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 12,
       "title": "Eddie Izzard: Dress to Kill",
       "like": 82,
@@ -143,7 +97,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 13,
       "title": "Pirates! Band of Misfits, The",
       "like": 42,
@@ -151,7 +105,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 14,
       "title": "Misérables, Les",
       "like": 3,
@@ -159,7 +113,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 15,
       "title": "Little Soldier, The (Petit soldat, Le)",
       "like": 50,
@@ -167,7 +121,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 16,
       "title": "Shanghai Dreams (Qing hong)",
       "like": 65,
@@ -175,7 +129,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 17,
       "title": "Latitudes",
       "like": 25,
@@ -183,7 +137,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 18,
       "title": "Loveless, The (Breakdown)",
       "like": 86,
@@ -191,7 +145,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 19,
       "title": "Dead Man on Campus",
       "like": 4,
@@ -199,7 +153,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 20,
       "title": "Charlotte's Web 2: Wilbur's Great Adventure",
       "like": 8,
@@ -207,7 +161,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 21,
       "title": "Ugly Duckling and Me!, The",
       "like": 7,
@@ -215,7 +169,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 22,
       "title": "Something to Talk About",
       "like": 81,
@@ -223,7 +177,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 23,
       "title": "Made in America",
       "like": 5,
@@ -231,7 +185,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 24,
       "title": "Muppets Take Manhattan, The",
       "like": 39,
@@ -239,7 +193,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 25,
       "title": "Abbott and Costello Meet the Mummy",
       "like": 50,
@@ -247,7 +201,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 26,
       "title": "(Untitled)",
       "like": 57,
@@ -255,7 +209,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 27,
       "title": "Riding the Bullet",
       "like": 83,
@@ -263,7 +217,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 28,
       "title": "Fifty Pills",
       "like": 30,
@@ -271,7 +225,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 29,
       "title": "Days and Nights",
       "like": 92,
@@ -279,7 +233,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 30,
       "title": "Quiller Memorandum, The",
       "like": 65,
@@ -287,7 +241,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 31,
       "title": "Guardian Angel",
       "like": 72,
@@ -295,7 +249,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 32,
       "title": "Final: The Rapture",
       "like": 30,
@@ -303,7 +257,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 33,
       "title": "Aspen Extreme",
       "like": 31,
@@ -311,7 +265,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 34,
       "title": "Sexual Life",
       "like": 44,
@@ -319,7 +273,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 35,
       "title": "Les hautes solitudes",
       "like": 90,
@@ -327,7 +281,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 36,
       "title": "Kon-Tiki",
       "like": 87,
@@ -335,7 +289,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 37,
       "title": "Baby Geniuses",
       "like": 82,
@@ -343,7 +297,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 38,
       "title": "Batman and Robin",
       "like": 62,
@@ -351,7 +305,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 39,
       "title": "What Price Glory",
       "like": 46,
@@ -359,7 +313,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 40,
       "title": "Time to Love and a Time to Die, A",
       "like": 41,
@@ -367,7 +321,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 41,
       "title": "Stephanie Daley",
       "like": 100,
@@ -375,7 +329,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 42,
       "title": "Blood Suckers from Outer Space",
       "like": 73,
@@ -383,7 +337,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 43,
       "title": "Papillon",
       "like": 53,
@@ -391,7 +345,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 44,
       "title": "Targets",
       "like": 62,
@@ -399,7 +353,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 45,
       "title": "Free Radicals (Böse Zellen)",
       "like": 23,
@@ -407,7 +361,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 46,
       "title": "Never Talk to Strangers",
       "like": 13,
@@ -415,7 +369,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 47,
       "title": "Bloody Angels (1732 Høtten: Marerittet har et postnummer)",
       "like": 34,
@@ -423,7 +377,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 48,
       "title": "Firelight",
       "like": 56,
@@ -431,7 +385,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 49,
       "title": "Darkest Hour, The",
       "like": 64,
@@ -439,7 +393,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 50,
       "title": "Moonrise",
       "like": 87,
@@ -447,7 +401,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 51,
       "title": "Underworld",
       "like": 78,
@@ -455,7 +409,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 52,
       "title": "Wild in the Country",
       "like": 31,
@@ -463,7 +417,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 53,
       "title": "Cop",
       "like": 81,
@@ -471,7 +425,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 54,
       "title": "Dark Command",
       "like": 65,
@@ -479,7 +433,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 55,
       "title": "Milarepa",
       "like": 65,
@@ -487,7 +441,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 56,
       "title": "In a Town This Size",
       "like": 100,
@@ -495,7 +449,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 57,
       "title": "Blackbird",
       "like": 38,
@@ -503,7 +457,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 58,
       "title": "Vanishing Point",
       "like": 38,
@@ -511,7 +465,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 59,
       "title": "Ainoat Oikeat",
       "like": 22,
@@ -519,7 +473,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 60,
       "title": "Room at the Top",
       "like": 71,
@@ -527,7 +481,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 61,
       "title": "Misérables in Concert, Les",
       "like": 22,
@@ -535,7 +489,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 62,
       "title": "Weekend It Lives, The (Ax 'Em)",
       "like": 75,
@@ -543,7 +497,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 63,
       "title": "Frankie Starlight",
       "like": 43,
@@ -551,7 +505,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 64,
       "title": "Ballou",
       "like": 96,
@@ -559,7 +513,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 65,
       "title": "America, America",
       "like": 19,
@@ -567,7 +521,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 66,
       "title": "About Last Night",
       "like": 59,
@@ -575,7 +529,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 67,
       "title": "Kogel mogel",
       "like": 25,
@@ -583,7 +537,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 68,
       "title": "Taistelu Näsilinnasta 1918",
       "like": 50,
@@ -591,7 +545,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 69,
       "title": "Pulling John",
       "like": 100,
@@ -599,7 +553,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 70,
       "title": "Rosewood",
       "like": 86,
@@ -607,7 +561,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 71,
       "title": "Leafie, a Hen Into the Wild (Madangeul Naon Amtak)",
       "like": 13,
@@ -615,7 +569,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 72,
       "title": "Shine a Light",
       "like": 59,
@@ -623,7 +577,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 73,
       "title": "Other Side of Midnight, The",
       "like": 35,
@@ -631,7 +585,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 74,
       "title": "American History X",
       "like": 71,
@@ -639,7 +593,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 75,
       "title": "Myth, The (San wa)",
       "like": 17,
@@ -647,7 +601,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 76,
       "title": "Hack!",
       "like": 48,
@@ -655,7 +609,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 77,
       "title": "Darkest Hour, The",
       "like": 98,
@@ -663,7 +617,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 78,
       "title": "Feast of All Saints",
       "like": 65,
@@ -671,7 +625,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 79,
       "title": "Devil Inside, The",
       "like": 17,
@@ -679,7 +633,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 80,
       "title": "Space Odyssey: Voyage to the Planets",
       "like": 76,
@@ -687,7 +641,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 81,
       "title": "American Psycho",
       "like": 21,
@@ -695,7 +649,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 82,
       "title": "Fly Away",
       "like": 99,
@@ -703,7 +657,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 83,
       "title": "The Chase",
       "like": 37,
@@ -711,7 +665,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 84,
       "title": "Wake of the Red Witch",
       "like": 66,
@@ -719,7 +673,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 85,
       "title": "Extraordinary Adventures of Mr. West in the Land of the Bolsheviks, The (Neobychainye priklyucheniya mistera Vesta v strane bolshevikov)",
       "like": 34,
@@ -727,7 +681,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 86,
       "title": "Effie Gray",
       "like": 90,
@@ -735,7 +689,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 87,
       "title": "A Matter of Size",
       "like": 8,
@@ -743,7 +697,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 88,
       "title": "Naked Jungle, The",
       "like": 43,
@@ -751,7 +705,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 89,
       "title": "Zift",
       "like": 81,
@@ -759,7 +713,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 90,
       "title": "Hungry for Change",
       "like": 17,
@@ -767,7 +721,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 91,
       "title": "The DUFF",
       "like": 15,
@@ -775,7 +729,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 92,
       "title": "Rock-a-Bye Baby",
       "like": 89,
@@ -783,7 +737,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 93,
       "title": "Butch Cassidy and the Sundance Kid",
       "like": 67,
@@ -791,7 +745,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 94,
       "title": "Tarzan Escapes",
       "like": 5,
@@ -799,7 +753,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 95,
       "title": "Next Door (Naboer)",
       "like": 29,
@@ -807,7 +761,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 96,
       "title": "Buddy Holly Story, The",
       "like": 58,
@@ -815,7 +769,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 97,
       "title": "Titan A.E.",
       "like": 13,
@@ -823,7 +777,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 98,
       "title": "Magic Mike",
       "like": 89,
@@ -831,7 +785,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 99,
       "title": "Prinsessa Ruusunen",
       "like": 62,
@@ -839,7 +793,7 @@
       "tags": []
     },
     {
-      "hexcodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
+      "hexCodes": "F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B",
       "id": 100,
       "title": "Cheaper by the Dozen",
       "like": 85,
