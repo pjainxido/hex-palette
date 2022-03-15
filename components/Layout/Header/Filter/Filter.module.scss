@@ -22,3 +22,15 @@
   box-sizing: border-box;
   box-shadow: 0 10px 20px 0 rgb(0 0 0 /5%);
 }
+
+.FilterLabel {
+  .active {
+    background-color: grey;
+    opacity: 1;
+    transition: opacity 0.4s;
+  }
+
+  .unActive {
+    opacity: 0.6;
+  }
+}

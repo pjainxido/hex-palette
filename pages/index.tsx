@@ -8,7 +8,7 @@ import axios from 'axios';
 import { checkDateOnRange } from 'utils/common';
 
 const Home: NextPage<IPaletteList> = ({ contents }) => {
-  const { tags, timeFrame, sortBy, title } = useSelector(
+  const { tags, timeFrame, sort, title } = useSelector(
     (state: RootState) => state.filter
   );
 
@@ -22,14 +22,14 @@ const Home: NextPage<IPaletteList> = ({ contents }) => {
     .sort((prev, next) => {
       const prevDate = new Date(prev.createdAt).getTime();
       const nextDate = new Date(next.createdAt).getTime();
-      switch (sortBy) {
+      switch (sort) {
         case 'hot':
           return prev.like - next.like;
-        case 'oldest':
+        case 'old':
           return prevDate - nextDate;
         case 'random':
           return Math.random() - 0.5;
-        case 'newest':
+        case 'new':
           return nextDate - prevDate;
         default:
           return nextDate - prevDate;
