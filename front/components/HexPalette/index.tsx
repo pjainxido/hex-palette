@@ -1,20 +1,12 @@
 import HexContainer from './HexContainer';
 import { getTimeDiff } from 'utils/common';
 
+import { Palette } from 'store/modules/paletteList';
 import styles from './Hex.module.scss';
 import Link from 'next/link';
 
-export type HexPaletteType = {
-  id: string;
-  hexCodes: string;
-  like: number;
-  createdAt: Date;
-  title: string;
-  tags: string[];
-};
-
 interface HexPaletteProps {
-  palette: HexPaletteType;
+  palette: Palette;
 }
 
 const HexPalette: React.FC<HexPaletteProps> = ({ palette }) => {

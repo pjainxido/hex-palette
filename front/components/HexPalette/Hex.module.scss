@@ -20,8 +20,12 @@
   border-radius: 10px;
   .header {
     .title {
+      width: 16rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 1.2rem;
       a {
-        font-size: 1.2rem;
         &:hover {
           text-decoration: underline;
         }

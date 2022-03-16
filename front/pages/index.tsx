@@ -3,7 +3,6 @@ import type { NextPage } from 'next';
 import PaletteList, { IPaletteList } from 'components/PaletteList';
 import { RootState } from 'store/modules';
 import { useSelector } from 'react-redux';
-import { mockPaletteList } from 'mock';
 import axios from 'axios';
 import { checkDateOnRange } from 'utils/common';
 

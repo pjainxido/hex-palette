@@ -1,4 +1,4 @@
-import { HexPaletteType } from 'components/HexPalette';
+import { Palette } from 'store/modules/paletteList';
 
 export const hexCodesMock: string[] = [
   'F7F7F7',
@@ -12,7 +12,7 @@ export const hexCodesMock: string[] = [
 
 export const unparsedhexCodeMock = 'F7F7F7#FFB72B#FFE61B#F7F7F7#B5FE83#FFE61B';
 
-export const mockHexPalette: HexPaletteType = {
+export const mockHexPalette: Palette = {
   id: '1',
   hexCodes: unparsedhexCodeMock,
   like: 1004,
@@ -21,7 +21,7 @@ export const mockHexPalette: HexPaletteType = {
   tags: ['sample'],
 };
 
-export const mockPaletteList: HexPaletteType[] = [
+export const mockPaletteList: Palette[] = [
   mockHexPalette,
   mockHexPalette,
   mockHexPalette,

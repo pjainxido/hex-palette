@@ -1,8 +1,10 @@
-import HexPalette, { HexPaletteType } from 'components/HexPalette';
+import { Palette } from 'store/modules/paletteList';
+import HexPalette from 'components/HexPalette';
+
 import styles from './PaletteList.module.scss';
 
 export interface IPaletteList {
-  contents: HexPaletteType[];
+  contents: Palette[];
 }
 const PaletteList: React.FC<IPaletteList> = ({ contents }) => {
   return (

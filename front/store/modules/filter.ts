@@ -42,7 +42,7 @@ export type FilterAction = ReturnType<
   | typeof changeSort
 >;
 
-//REDUCERS
+//STATE
 export type SortOption = 'new' | 'hot' | 'random' | 'old';
 export type TimeFrame = null | 'week' | 'day' | 'month' | 'year';
 
@@ -60,6 +60,7 @@ export const initalFilterState: IFilterState = {
   title: '',
 };
 
+//REDUCER
 const filterReducer = (
   state: IFilterState = initalFilterState,
   action: FilterAction
@@ -91,4 +92,5 @@ const filterReducer = (
       return state;
   }
 };
+
 export default filterReducer;
