@@ -1,12 +1,11 @@
-const dotenv = require("dotenv");
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
+import dotenv from 'dotenv'
+import express from 'express'
+import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
 
 dotenv.config();
 
 const MONGODB_URI = process.env.MONGO_DB_URI;
-console.log(MONGODB_URI);
 
 mongoose.Promise = global.Promise;
 mongoose
@@ -29,6 +28,12 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
   res.json({ message: "Server is running :D" });
 });
+
+app.get('palettes', (req, res)=> {
+  mongoose.Collection('palette')
+
+
+})
 
 const PORT = 8080;
 
