@@ -5,11 +5,11 @@ import { Palette } from 'store/modules/paletteList';
 import styles from './Hex.module.scss';
 import Link from 'next/link';
 
-interface HexPaletteProps {
+export interface IHexPalette {
   palette: Palette;
 }
 
-const HexPalette: React.FC<HexPaletteProps> = ({ palette }) => {
+const HexPalette: React.FC<IHexPalette> = ({ palette }) => {
   const { id, hexCodes, like, createdAt, title } = palette;
   const hexCodeList: string[] = hexCodes.split('#').map((code) => '#' + code);
 

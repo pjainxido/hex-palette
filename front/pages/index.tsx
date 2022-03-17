@@ -1,3 +1,4 @@
+import { GetServerSideProps } from 'next';
 import type { NextPage } from 'next';
 
 import PaletteList, { IPaletteList } from 'components/PaletteList';
@@ -41,7 +42,7 @@ const Home: NextPage<IPaletteList> = ({ contents }) => {
   );
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetServerSideProps = async () => {
   const response = await axios.get('http://localhost:3004/palettes');
 
   return {
@@ -49,6 +50,6 @@ export async function getStaticProps() {
       contents: response.data,
     },
   };
-}
+};
 
 export default Home;
