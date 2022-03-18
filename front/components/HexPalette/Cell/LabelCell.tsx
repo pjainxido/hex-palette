@@ -3,9 +3,10 @@ import styles from './Cell.module.scss';
 
 interface ILabelCell {
   label: string;
+  isLarge?: boolean;
 }
 
-const LabelCell: React.FC<ILabelCell> = ({ label }) => {
+const LabelCell: React.FC<ILabelCell> = ({ label, isLarge = false }) => {
   const copiedText = 'copied!';
   const hexCode = label === copiedText ? 'transparent' : label;
 
@@ -23,7 +24,7 @@ const LabelCell: React.FC<ILabelCell> = ({ label }) => {
   };
 
   return (
-    <div className={styles.HexCell} style={cellStyle}>
+    <div className={isLarge ? styles.LargeCell : styles.Cell} style={cellStyle}>
       <div className={styles.top} style={cellBorderStyle} />
       <span className={styles.HexCodeText} style={labelStyle}>
         {label}

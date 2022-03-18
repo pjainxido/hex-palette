@@ -6,6 +6,7 @@ import styles from './PaletteList.module.scss';
 export interface IPaletteList {
   contents: Palette[];
 }
+
 const PaletteList: React.FC<IPaletteList> = ({ contents }) => {
   return (
     <div className={styles.PaletteList}>

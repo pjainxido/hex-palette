@@ -1,15 +1,15 @@
-import HexContainer from './HexContainer';
+import PaletteHexagon from './PaletteHexagon';
 import { getTimeDiff } from 'utils/common';
 
 import { Palette } from 'store/modules/paletteList';
 import styles from './Hex.module.scss';
 import Link from 'next/link';
 
-interface HexPaletteProps {
+export interface IHexPalette {
   palette: Palette;
 }
 
-const HexPalette: React.FC<HexPaletteProps> = ({ palette }) => {
+const HexPalette: React.FC<IHexPalette> = ({ palette }) => {
   const { id, hexCodes, like, createdAt, title } = palette;
   const hexCodeList: string[] = hexCodes.split('#').map((code) => '#' + code);
 
@@ -22,7 +22,7 @@ const HexPalette: React.FC<HexPaletteProps> = ({ palette }) => {
           </Link>
         </div>
       </div>
-      <HexContainer hexCodes={hexCodeList} />
+      <PaletteHexagon hexCodes={hexCodeList} />
       <div className={styles.footer}>
         <div className={styles.like}>{like}</div>
         <div className={styles.date}>{getTimeDiff(createdAt)}</div>

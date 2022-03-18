@@ -1,6 +1,6 @@
 import { useEffect, useReducer, useRef } from 'react';
-import HexContainer from '../../../components/HexPalette/HexContainer';
 import { HexColorPicker, HexColorInput } from 'react-colorful';
+import PaletteHexagon from 'components/HexPalette/PaletteHexagon';
 import {
   initialPaletteState,
   editPaletteReducer,
@@ -39,7 +39,11 @@ const EditPalette = () => {
 
   return (
     <div className={styles.EditPalette}>
-      <HexContainer hexCodes={hexCodes} selectCell={selectCell} />
+      <PaletteHexagon
+        hexCodes={hexCodes}
+        selectCell={selectCell}
+        isLarge={true}
+      />
       {onPicker && (
         <div className={styles.Picker} ref={picker}>
           <HexColorPicker color={pickerColor} onChange={handlePicker} />
