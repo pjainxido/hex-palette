@@ -1,4 +1,30 @@
-.HexCell {
+.LargeCell {
+  position: relative;
+  float: left;
+  width: 7rem;
+  height: 3.5rem;
+  margin-top: 2.1rem;
+  margin-bottom: 0.35rem;
+  margin-right: 0.35rem;
+  .top {
+    position: absolute;
+    border-bottom: 2.1rem solid transparent;
+    border-right: 3.5rem solid transparent;
+    border-left: 3.5rem solid transparent;
+    top: -2.1rem;
+  }
+  .bottom {
+    position: absolute;
+    border-top: 2.1rem solid transparent;
+    border-right: 3.5rem solid transparent;
+    border-left: 3.5rem solid transparent;
+    bottom: -2.1rem;
+  }
+}
+
+.Cell {
+  position: relative;
+  float: left;
   width: 5rem;
   height: 2.5rem;
   position: relative;

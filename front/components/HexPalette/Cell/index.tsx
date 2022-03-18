@@ -6,6 +6,7 @@ interface HexCellProps {
   selectCell?: (target: number) => void;
   handleLabel: (code: string) => void;
   hexCode: string;
+  isLarge?: boolean;
 }
 
 const Cell: React.FC<HexCellProps> = ({
@@ -13,8 +14,10 @@ const Cell: React.FC<HexCellProps> = ({
   hexCode,
   selectCell,
   handleLabel,
+  isLarge = false,
 }) => {
   const copiedText = 'copied!';
+  console.log(isLarge);
 
   const cellStyle: CSSProperties = {
     backgroundColor: hexCode,
@@ -36,7 +39,7 @@ const Cell: React.FC<HexCellProps> = ({
 
   return (
     <div
-      className={styles.HexCell}
+      className={isLarge ? styles.LargeCell : styles.Cell}
       style={cellStyle}
       onMouseEnter={() => handleLabel(hexCode)}
       onMouseLeave={() => handleLabel('')}

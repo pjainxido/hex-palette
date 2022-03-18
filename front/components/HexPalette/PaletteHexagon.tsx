@@ -27,7 +27,7 @@ const PaletteRow: React.FC<IPaletteRow> = ({
   isLarge = false,
 }) => {
   return hexCodes ? (
-    <div className={styles.PaletteRow}>
+    <div className={isLarge ? styles.LargeRow : styles.Row}>
       {label !== undefined ? (
         <>
           <Cell
@@ -36,20 +36,23 @@ const PaletteRow: React.FC<IPaletteRow> = ({
             key={0}
             handleLabel={handleLabel}
             selectCell={selectCell}
+            isLarge={isLarge}
           />
-          <LabelCell label={label} />
+          <LabelCell label={label} isLarge={isLarge} />
           <Cell
             cellIndex={hexIndex[1]}
             hexCode={hexCodes[1]}
             key={1}
             handleLabel={handleLabel}
             selectCell={selectCell}
+            isLarge={isLarge}
           />
         </>
       ) : (
         hexCodes.map((code, index) => {
           return (
             <Cell
+              isLarge={isLarge}
               cellIndex={hexIndex[index]}
               hexCode={code}
               key={index}
@@ -79,6 +82,7 @@ const PaletteHexagon: React.FC<IPaletteHexagon> = ({
         hexIndex={[0, 1]}
         handleLabel={handleLabel}
         selectCell={selectCell}
+        isLarge={isLarge}
       />
       <PaletteRow
         hexCodes={hexCodes.filter((_, index) => index >= 2 && index < 4)}
@@ -86,12 +90,14 @@ const PaletteHexagon: React.FC<IPaletteHexagon> = ({
         hexIndex={[2, 3]}
         handleLabel={handleLabel}
         selectCell={selectCell}
+        isLarge={isLarge}
       />
       <PaletteRow
         hexCodes={hexCodes.filter((_, index) => index >= 4)}
         hexIndex={[4, 5]}
         handleLabel={handleLabel}
         selectCell={selectCell}
+        isLarge={isLarge}
       />
     </div>
   );

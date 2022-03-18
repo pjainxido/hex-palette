@@ -1,6 +1,13 @@
 @import 'styles/mixin';
 
-.PaletteRow {
+.LargeRow {
+  display: flex;
+  &:nth-child(odd) {
+    margin-left: 3.64rem;
+  }
+}
+
+.Row {
   display: flex;
   &:nth-child(odd) {
     margin-left: 2.6rem;
