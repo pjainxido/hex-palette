@@ -1,34 +1,36 @@
 import { useState } from 'react';
 import LabelCell from './Cell/LabelCell';
-import HexCell from './Cell/HexCell';
+import Cell from './Cell';
 import styles from './Hex.module.scss';
 
 export interface HexCodes {
   hexCodes: string[];
 }
 
-interface IHexRow extends IHexContainer {
+interface IPaletteRow extends IPaletteHexagon {
   handleLabel: (code: string) => void;
   hexIndex: number[];
+  isLarge?: boolean;
   label?: string;
 }
 
-interface IHexContainer extends HexCodes {
+interface IPaletteHexagon extends HexCodes {
   selectCell?: (targetIndex: number) => void;
 }
 
-const HexRow: React.FC<IHexRow> = ({
+const PaletteRow: React.FC<IPaletteRow> = ({
   hexCodes,
   hexIndex,
   label,
   selectCell,
   handleLabel,
+  isLarge = false,
 }) => {
   return hexCodes ? (
-    <div className={styles.HexRow}>
+    <div className={styles.PaletteRow}>
       {label !== undefined ? (
         <>
-          <HexCell
+          <Cell
             cellIndex={hexIndex[0]}
             hexCode={hexCodes[0]}
             key={0}
@@ -36,7 +38,7 @@ const HexRow: React.FC<IHexRow> = ({
             selectCell={selectCell}
           />
           <LabelCell label={label} />
-          <HexCell
+          <Cell
             cellIndex={hexIndex[1]}
             hexCode={hexCodes[1]}
             key={1}
@@ -47,7 +49,7 @@ const HexRow: React.FC<IHexRow> = ({
       ) : (
         hexCodes.map((code, index) => {
           return (
-            <HexCell
+            <Cell
               cellIndex={hexIndex[index]}
               hexCode={code}
               key={index}
@@ -61,27 +63,30 @@ const HexRow: React.FC<IHexRow> = ({
   ) : null;
 };
 
-const HexContainer: React.FC<IHexContainer> = ({ hexCodes, selectCell }) => {
+const PaletteHexagon: React.FC<IPaletteHexagon> = ({
+  hexCodes,
+  selectCell,
+}) => {
   const [label, setLabel] = useState<string>('');
   const handleLabel = (code: string) => {
     setLabel(code);
   };
   return (
-    <div className={styles.HexContainer}>
-      <HexRow
+    <div className={styles.PaletteHexagon}>
+      <PaletteRow
         hexCodes={hexCodes.filter((_, index) => index < 2)}
         hexIndex={[0, 1]}
         handleLabel={handleLabel}
         selectCell={selectCell}
       />
-      <HexRow
+      <PaletteRow
         hexCodes={hexCodes.filter((_, index) => index >= 2 && index < 4)}
         label={label}
         hexIndex={[2, 3]}
         handleLabel={handleLabel}
         selectCell={selectCell}
       />
-      <HexRow
+      <PaletteRow
         hexCodes={hexCodes.filter((_, index) => index >= 4)}
         hexIndex={[4, 5]}
         handleLabel={handleLabel}
@@ -91,4 +96,4 @@ const HexContainer: React.FC<IHexContainer> = ({ hexCodes, selectCell }) => {
   );
 };
 
-export default HexContainer;
+export default PaletteHexagon;

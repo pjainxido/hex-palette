@@ -1,13 +1,13 @@
 @import 'styles/mixin';
 
-.HexRow {
+.PaletteRow {
   display: flex;
   &:nth-child(odd) {
     margin-left: 2.6rem;
   }
 }
 
-.HexContainer {
+.PaletteHexagon {
   margin: 1rem;
   padding-bottom: 1.5rem;
   height: fit-content;

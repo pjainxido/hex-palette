@@ -8,7 +8,7 @@ interface HexCellProps {
   hexCode: string;
 }
 
-const HexCell: React.FC<HexCellProps> = ({
+const Cell: React.FC<HexCellProps> = ({
   cellIndex,
   hexCode,
   selectCell,
@@ -52,8 +52,4 @@ const HexCell: React.FC<HexCellProps> = ({
   );
 };
 
-export interface CellProps {
-  hexCode: string;
-}
-
-export default HexCell;
+export default Cell;

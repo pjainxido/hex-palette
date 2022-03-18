@@ -1,4 +1,4 @@
-import HexContainer from './HexContainer';
+import PaletteHexagon from './PaletteHexagon';
 import { getTimeDiff } from 'utils/common';
 
 import { Palette } from 'store/modules/paletteList';
@@ -22,7 +22,7 @@ const HexPalette: React.FC<IHexPalette> = ({ palette }) => {
           </Link>
         </div>
       </div>
-      <HexContainer hexCodes={hexCodeList} />
+      <PaletteHexagon hexCodes={hexCodeList} />
       <div className={styles.footer}>
         <div className={styles.like}>{like}</div>
         <div className={styles.date}>{getTimeDiff(createdAt)}</div>
