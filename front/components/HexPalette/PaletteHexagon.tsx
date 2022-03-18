@@ -10,11 +10,11 @@ export interface HexCodes {
 interface IPaletteRow extends IPaletteHexagon {
   handleLabel: (code: string) => void;
   hexIndex: number[];
-  isLarge?: boolean;
   label?: string;
 }
 
 interface IPaletteHexagon extends HexCodes {
+  isLarge?: boolean;
   selectCell?: (targetIndex: number) => void;
 }
 
@@ -66,6 +66,7 @@ const PaletteRow: React.FC<IPaletteRow> = ({
 const PaletteHexagon: React.FC<IPaletteHexagon> = ({
   hexCodes,
   selectCell,
+  isLarge = false,
 }) => {
   const [label, setLabel] = useState<string>('');
   const handleLabel = (code: string) => {

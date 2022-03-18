@@ -39,7 +39,11 @@ const EditPalette = () => {
 
   return (
     <div className={styles.EditPalette}>
-      <PaletteHexagon hexCodes={hexCodes} selectCell={selectCell} />
+      <PaletteHexagon
+        hexCodes={hexCodes}
+        selectCell={selectCell}
+        isLarge={true}
+      />
       {onPicker && (
         <div className={styles.Picker} ref={picker}>
           <HexColorPicker color={pickerColor} onChange={handlePicker} />
