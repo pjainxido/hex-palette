@@ -1,4 +1,5 @@
-import ColorTag from 'components/Tag/ColorTag';
+import ColorTag, { colorTagList } from 'components/Tag/ColorTag';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from 'store/modules';
 import {
@@ -9,7 +10,6 @@ import {
   SortOption,
   TimeFrame,
 } from 'store/modules/filter';
-import { colorTagList } from '.';
 
 import styles from './Filter.module.scss';
 

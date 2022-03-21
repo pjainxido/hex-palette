@@ -2,7 +2,7 @@ import PaletteHexagon from './PaletteHexagon';
 import { getTimeDiff } from 'utils/common';
 
 import { Palette } from 'store/modules/paletteList';
-import styles from './Hex.module.scss';
+import styles from './HexPalette.module.scss';
 import Link from 'next/link';
 
 export interface IHexPalette {

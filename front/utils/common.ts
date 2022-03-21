@@ -51,4 +51,8 @@ const checkDateOnRange = (value: Date | string, option: TimeFrame) => {
   }
 };
 
-export { getTimeDiff, checkDateOnRange };
+const copyOnClipBoard = (text: string) => {
+  navigator.clipboard.writeText(text);
+};
+
+export { getTimeDiff, checkDateOnRange, copyOnClipBoard };

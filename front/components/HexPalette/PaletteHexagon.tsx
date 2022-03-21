@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import LabelCell from './Cell/LabelCell';
 import Cell from './Cell';
-import styles from './Hex.module.scss';
+import styles from './HexPalette.module.scss';
 
 export interface HexCodes {
   hexCodes: string[];
