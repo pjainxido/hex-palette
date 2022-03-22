@@ -25,13 +25,7 @@ const DetailFooter: React.FC<IDetailFooter> = ({ paletteId, like, tags }) => {
           const matchTag: IColorTag | undefined = colorTagList.find(
             (colorTag) => tag === colorTag.label
           );
-          return matchTag ? (
-            <ColorTag
-              key={index}
-              label={matchTag.label}
-              hexCode={matchTag.hexCode}
-            />
-          ) : null;
+          return matchTag ? <ColorTag tag={matchTag} key={index} /> : null;
         })}
       </div>
     </div>

@@ -1,4 +1,4 @@
-import ColorTag, { colorTagList } from 'components/Tag/ColorTag';
+import ColorTag, { colorTagList, IColorTag } from 'components/Tag/ColorTag';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from 'store/modules';
@@ -23,25 +23,26 @@ interface ITagFilter extends IFilterLabel {
   unActiveFilter: () => void;
 }
 
-interface IColorTagFilter extends ITagFilter {
+interface IColorTagFilter extends ITagFilter, IColorTag {
   hexCode: string;
 }
 
 const ColorTagFilter: React.FC<IColorTagFilter> = ({
+  tagID,
   isActive,
   activeFilter,
   unActiveFilter,
   hexCode,
   label,
 }) => {
-  return (
-    <ColorTag
-      onClick={() => (isActive ? unActiveFilter() : activeFilter())}
-      hexCode={hexCode}
-      label={label}
-      background={isActive ? '#ececec' : undefined}
-    />
-  );
+  const tag: IColorTag = {
+    tagID: tagID,
+    onClick: () => (isActive ? unActiveFilter() : activeFilter()),
+    hexCode: hexCode,
+    label: label,
+    background: isActive ? '#ececec' : undefined,
+  };
+  return <ColorTag tag={tag} />;
 };
 
 const FilterLabel: React.FC<IFilterLabel> = ({
@@ -143,8 +144,9 @@ const DropDownFilter = () => {
         />
       </DropDownSection>
       <DropDownSection title="ColorTag">
-        {colorTagList.map(({ label, hexCode }, index) => (
+        {colorTagList.map(({ label, hexCode, tagID }, index) => (
           <ColorTagFilter
+            tagID={tagID}
             label={label}
             key={index}
             isActive={tags.includes(label)}
