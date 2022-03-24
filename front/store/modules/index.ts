@@ -1,9 +1,11 @@
 import { AnyAction, CombinedState, combineReducers } from 'redux';
 import { HYDRATE } from 'next-redux-wrapper';
 import filter, { IFilterState } from './filter';
+import paletteList, { IPalettesListState } from './paletteList';
 
 interface IState {
   filter: IFilterState;
+  paletteList: IPalettesListState;
 }
 
 const rootReducer = (
@@ -17,6 +19,7 @@ const rootReducer = (
     default: {
       const combineReducer = combineReducers({
         filter,
+        paletteList,
       });
       return combineReducer(state, action);
     }

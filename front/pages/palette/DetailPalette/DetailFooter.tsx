@@ -1,4 +1,4 @@
-import LikeButton, { ILikeButton } from 'components/HexPalette/LikeButton';
+import LikeButton, { ILikeButton } from 'components/LikeButton';
 import { copyOnClipBoard } from 'utils/common';
 import { colorTagList } from 'components/Tag/ColorTag';
 

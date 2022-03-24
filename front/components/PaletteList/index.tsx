@@ -10,9 +10,11 @@ export interface IPaletteList {
 const PaletteList: React.FC<IPaletteList> = ({ contents }) => {
   return (
     <div className={styles.PaletteList}>
-      {contents.map((item, index) => {
-        return <HexPalette key={index} palette={{ ...item }} />;
-      })}
+      {contents.length
+        ? contents.map((item, index) => {
+            return <HexPalette key={index} palette={{ ...item }} />;
+          })
+        : 'NO RESULT'}
     </div>
   );
 };

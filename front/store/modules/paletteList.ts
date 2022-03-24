@@ -27,7 +27,7 @@ export type Palette = {
   tags: string[];
 };
 
-interface IPalettesListState {
+export interface IPalettesListState {
   palettes: Palette[];
   likePalettes: string[];
   page: number;
@@ -61,6 +61,8 @@ const paletteListReducer = (
           (palette) => palette !== action.palette
         ),
       };
+    default:
+      return state;
   }
 };
 
