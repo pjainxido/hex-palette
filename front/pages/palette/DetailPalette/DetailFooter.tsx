@@ -1,4 +1,5 @@
-import LikeButton, { ILikeButton } from 'components/LikeButton';
+import Button from 'components/Button';
+import LikeButton, { ILikeButton } from 'components/Button/LikeButton';
 import { copyOnClipBoard } from 'utils/common';
 import { colorTagList } from 'components/Tag/ColorTag';
 
@@ -16,9 +17,9 @@ const DetailFooter: React.FC<IDetailFooter> = ({ paletteId, like, tags }) => {
 
   return (
     <div className={styles.DetailFooter}>
-      <div className={styles.buttonContainer}>
+      <div className={styles.buttons}>
         <LikeButton paletteId={paletteId} like={like} />
-        <button onClick={copyLink}>link</button>
+        <Button onClick={copyLink}>copy</Button>
       </div>
       <div className={styles.tagList}>
         {tags.map((tag, index) => {

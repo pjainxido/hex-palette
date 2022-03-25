@@ -1,5 +1,7 @@
-import { getTimeDiff } from 'utils/common';
+import DateLabel from 'components/DateLabel';
+
 import styles from './DetailPalette.module.scss';
+
 interface IDetailHeader {
   title: string;
   createdAt: Date;
@@ -8,8 +10,10 @@ interface IDetailHeader {
 const DetailHeader = ({ title, createdAt }: IDetailHeader) => {
   return (
     <div className={styles.DetailHeader}>
-      <div className={styles.title}>{title}</div>
-      <div className={styles.date}>{getTimeDiff(createdAt)}</div>
+      <h1 className={styles.title}>{title}</h1>
+      <div className={styles.date}>
+        <DateLabel date={createdAt} />
+      </div>
     </div>
   );
 };

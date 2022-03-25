@@ -15,9 +15,9 @@
 }
 
 .PaletteHexagon {
-  margin: 1rem;
+  margin: 1rem auto;
   padding-bottom: 1.5rem;
-  height: fit-content;
+  width: fit-content;
 }
 
 .HexPalette {
@@ -43,9 +43,5 @@
   .footer {
     display: flex;
     justify-content: space-between;
-    .like {
-    }
-    .date {
-    }
   }
 }

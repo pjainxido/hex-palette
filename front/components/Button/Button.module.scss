@@ -1,0 +1,30 @@
+.Button,
+.LikeButton {
+  display: flex;
+  background-color: inherit;
+  width: fit-content;
+  padding: 0.6rem 1rem;
+  margin: 0.3rem 0.7rem;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  border: 1px solid #ececec;
+}
+
+.LikeButton {
+  display: flex;
+  width: fit-content;
+  padding: 0.6rem 1rem;
+  margin: 0.3rem 0.7rem;
+}
+
+.LikeLabel {
+  padding-left: 0.7rem;
+  user-select: none;
+  font-size: 0.8rem;
+}
+
+.LikeButton {
+  border-color: #f473b9;
+  color: #f473b9;
+}

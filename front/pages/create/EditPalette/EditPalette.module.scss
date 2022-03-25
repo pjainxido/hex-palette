@@ -1,4 +1,6 @@
 .EditPalette {
+  display: flex;
+  width: fit-content;
   .Picker {
     margin: 1rem;
     .colorInput {

@@ -1,11 +1,27 @@
+.DetailPalette {
+  max-width: 40rem;
+}
+
 .DetailHeader {
+  padding: 0 2rem;
   .title {
+    width: 100%;
+    font-size: 2.5rem;
+    text-overflow: ellipsis;
   }
   .date {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
 .DetailFooter {
+  padding: 1rem;
   .buttons {
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-start;
   }
 }
