@@ -1,9 +1,10 @@
 import PaletteHexagon from './PaletteHexagon';
-import { getTimeDiff } from 'utils/common';
 
 import { Palette } from 'store/modules/paletteList';
-import styles from './Hex.module.scss';
+import styles from './HexPalette.module.scss';
 import Link from 'next/link';
+import LikeButton from 'components/Button/LikeButton';
+import DateLabel from 'components/DateLabel';
 
 export interface IHexPalette {
   palette: Palette;
@@ -24,8 +25,10 @@ const HexPalette: React.FC<IHexPalette> = ({ palette }) => {
       </div>
       <PaletteHexagon hexCodes={hexCodeList} />
       <div className={styles.footer}>
-        <div className={styles.like}>{like}</div>
-        <div className={styles.date}>{getTimeDiff(createdAt)}</div>
+        <div className={styles.like}>
+          <LikeButton like={like} paletteId={id} />
+        </div>
+        <DateLabel date={createdAt} />
       </div>
     </div>
   );

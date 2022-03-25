@@ -1,6 +1,6 @@
 import { TimeFrame } from 'store/modules/filter';
 
-const getTimeDiff = (value: Date | string, todayValue?: Date): string => {
+const dateToLabelString = (value: Date | string, todayValue?: Date): string => {
   const today = todayValue || new Date();
   const timeValue = new Date(value);
 
@@ -51,4 +51,8 @@ const checkDateOnRange = (value: Date | string, option: TimeFrame) => {
   }
 };
 
-export { getTimeDiff, checkDateOnRange };
+const copyOnClipBoard = (text: string) => {
+  navigator.clipboard.writeText(text);
+};
+
+export { dateToLabelString, checkDateOnRange, copyOnClipBoard };

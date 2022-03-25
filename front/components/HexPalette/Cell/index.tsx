@@ -1,4 +1,5 @@
 import { CSSProperties } from 'react';
+import { copyOnClipBoard } from 'utils/common';
 import styles from './Cell.module.scss';
 
 interface HexCellProps {
@@ -17,7 +18,7 @@ const Cell: React.FC<HexCellProps> = ({
   isLarge = false,
 }) => {
   const copiedText = 'copied!';
-  console.log(isLarge);
+  //console.log(isLarge);
 
   const cellStyle: CSSProperties = {
     backgroundColor: hexCode,
@@ -32,9 +33,9 @@ const Cell: React.FC<HexCellProps> = ({
     handleLabel(copiedText);
   };
 
-  const codeCopyToClipBoard = (code: string) => {
+  const hexCodeCopy = (code: string) => {
     alertOnTextCopied();
-    navigator.clipboard.writeText(code);
+    copyOnClipBoard(code);
   };
 
   return (
@@ -44,9 +45,7 @@ const Cell: React.FC<HexCellProps> = ({
       onMouseEnter={() => handleLabel(hexCode)}
       onMouseLeave={() => handleLabel('')}
       onClick={
-        selectCell
-          ? () => selectCell(cellIndex)
-          : () => codeCopyToClipBoard(hexCode)
+        selectCell ? () => selectCell(cellIndex) : () => hexCodeCopy(hexCode)
       }
     >
       <div className={styles.top} style={cellBorderStyle}></div>
