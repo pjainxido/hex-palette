@@ -1,6 +1,14 @@
 const mongoose = require("mongoose");
+const autoIncrement = require("mongoose-auto-increment");
+
+autoIncrement.initialize(mongoose.connection);
 
 const paletteSchema = mongoose.Schema({
+  id: {
+    type: Number,
+    default: 0,
+    unique: true
+  },
   hexCodes: {
     type: String,
     required: true,
@@ -38,5 +46,12 @@ paletteSchema.statics.findAll = function () {
 paletteSchema.statics.findOneByPaletteId = function (paletteId) {
   return this.findOne({ paletteId });
 };
+
+paletteSchema.plugin(autoIncrement.plugin, {
+  model: "palette",
+  field: "id",
+  startAt: 1,
+  increment: 1,
+});
 
 module.exports = mongoose.model("Palette", paletteSchema);

@@ -18,7 +18,7 @@ router.get("/", (_, res) => {
     .catch((err) => res.status(500).send(err));
 });
 
-router.get("/id/:paletteid", (req, res) => {
+router.get("/palette/:paletteid", (req, res) => {
   Palette.findOneByPaletteId(req.params.paletteid)
     .then((palette) => {
       if (!palette) return res.status(404).send({ err: "Palette Not found" });
@@ -39,5 +39,6 @@ router.post("/", (req, res) => {
       res.status(500).send(err);
     });
 });
+
 
 module.exports = router;
