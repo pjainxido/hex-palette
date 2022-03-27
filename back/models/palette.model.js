@@ -14,6 +14,10 @@ const paletteSchema = mongoose.Schema({
     required: true,
     trim: true,
   },
+  view: {
+    type: Number,
+    default: 0,
+  },
   like: {
     type: Number,
     default: 0,
