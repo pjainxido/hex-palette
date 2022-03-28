@@ -7,7 +7,7 @@ const paletteSchema = mongoose.Schema({
   id: {
     type: Number,
     default: 0,
-    unique: true
+    unique: true,
   },
   hexCodes: {
     type: String,
@@ -48,7 +48,35 @@ paletteSchema.statics.findAll = function () {
 };
 
 paletteSchema.statics.findOneByPaletteId = function (paletteId) {
-  return this.findOne({ paletteId });
+  return this.findOne({ id: paletteId });
+};
+
+paletteSchema.statics.findByFilterOptions = function (sort, tags, startDate, page, limit) {
+  console.log(sort, tags, startDate);
+
+  let sortOption;
+  switch (sort) {
+    case "hot":
+      sortOption = { like: -1 };
+      break;
+    case "old":
+      sortOption = { createdAt: 1 };
+      break;
+    default:
+      sortOption = { createdAt: -1 };
+  }
+  if (tags.length) {
+    return this.find({})
+      .where("tags")
+      .all([...tags])
+      .where("createdAt")
+      .gte(new Date(new Date(startDate)))
+      .skip(page * limit)
+      .limit(50)
+      .sort(sortOption);
+  }
+
+  return this.find().where("createdAt");
 };
 
 paletteSchema.plugin(autoIncrement.plugin, {

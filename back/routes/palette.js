@@ -18,8 +18,20 @@ router.get("/", (_, res) => {
     .catch((err) => res.status(500).send(err));
 });
 
-router.get("/palette/:paletteid", (req, res) => {
-  Palette.findOneByPaletteId(req.params.paletteid)
+router.get("/filter", (req, res) => {
+  const { tags, sort, startDate, page = 0, limit = 50 } = req.query;
+  const parsedTags = tags.split(",");
+  Palette.findByFilterOptions(sort, parsedTags, startDate)
+    .then((palette) => {
+      if (!palette.length) return res.status(404).send({ err: "Palette not found" });
+      res.send(palette);
+    })
+    .catch((err) => res.status(500).send(err));
+});
+
+router.get("/id/:id", (req, res) => {
+  console.log(req.params);
+  Palette.findOneByPaletteId(req.params.id)
     .then((palette) => {
       if (!palette) return res.status(404).send({ err: "Palette Not found" });
       res.send(palette);
@@ -39,6 +51,5 @@ router.post("/", (req, res) => {
       res.status(500).send(err);
     });
 });
-
 
 module.exports = router;
