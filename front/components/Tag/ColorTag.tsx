@@ -1,15 +1,9 @@
-import React from 'react';
+import { ITag } from '.';
+
 import styles from './Tag.module.scss';
 
-interface Tag {
-  tagID: string;
-  label: string;
-}
-
-export interface IColorTag extends Tag {
+export interface IColorTag extends ITag {
   hexCode: string;
-  onClick?: () => void;
-  onClose?: (label: string) => void;
   background?: string;
 }
 // interface IColorTag {
@@ -19,57 +13,57 @@ export interface IColorTag extends Tag {
 
 export const colorTagList: IColorTag[] = [
   {
-    tagID: 'blue',
+    id: 'blue',
     label: 'Blue',
     hexCode: '#4073FF',
   },
   {
-    tagID: 'green',
+    id: 'green',
     label: 'Green',
     hexCode: '#7ECC49',
   },
   {
-    tagID: 'red',
+    id: 'red',
     label: 'Red',
     hexCode: '#DB4035',
   },
   {
-    tagID: 'pink',
+    id: 'pink',
     label: 'Pink',
     hexCode: '#EB97EB',
   },
   {
-    tagID: 'black',
+    id: 'black',
     label: 'Black',
     hexCode: '#333333',
   },
   {
-    tagID: 'yellow',
+    id: 'yellow',
     label: 'Yellow',
     hexCode: '#FAD000',
   },
   {
-    tagID: 'grey',
+    id: 'grey',
     label: 'Grey',
     hexCode: '#B8B8B8',
   },
   {
-    tagID: 'orange',
+    id: 'orange',
     label: 'Orange',
     hexCode: '#FF9933',
   },
   {
-    tagID: 'white',
+    id: 'white',
     label: 'White',
     hexCode: '#FFFFFF',
   },
   {
-    tagID: 'purple',
+    id: 'purple',
     label: 'Purple',
     hexCode: '#AF38EB',
   },
   {
-    tagID: 'navy',
+    id: 'navy',
     label: 'Navy',
     hexCode: '#414796',
   },

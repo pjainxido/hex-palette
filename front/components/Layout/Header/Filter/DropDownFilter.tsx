@@ -28,7 +28,7 @@ interface IColorTagFilter extends ITagFilter, IColorTag {
 }
 
 const ColorTagFilter: React.FC<IColorTagFilter> = ({
-  tagID,
+  id,
   isActive,
   activeFilter,
   unActiveFilter,
@@ -36,7 +36,7 @@ const ColorTagFilter: React.FC<IColorTagFilter> = ({
   label,
 }) => {
   const tag: IColorTag = {
-    tagID: tagID,
+    id: id,
     onClick: () => (isActive ? unActiveFilter() : activeFilter()),
     hexCode: hexCode,
     label: label,
@@ -144,9 +144,9 @@ const DropDownFilter = () => {
         />
       </DropDownSection>
       <DropDownSection title="ColorTag">
-        {colorTagList.map(({ label, hexCode, tagID }, index) => (
+        {colorTagList.map(({ label, hexCode, id }, index) => (
           <ColorTagFilter
-            tagID={tagID}
+            id={id}
             label={label}
             key={index}
             isActive={tags.includes(label)}
