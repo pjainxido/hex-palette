@@ -1,13 +1,10 @@
 import { GetServerSideProps } from 'next';
 import { NextPage } from 'next';
 import axios from 'axios';
-import HexPalette from 'components/HexPalette';
 import { IHexPalette } from 'components/HexPalette';
 
 import styles from './PalettePage.module.scss';
-import { mockHexPalette } from 'mock';
 import DetailPalette from './DetailPalette';
-import { Palette } from 'store/modules/paletteList';
 
 const PalettePage: NextPage<IHexPalette | null> = ({ palette }) => {
   // const mockData = mockHexPalette;
@@ -20,9 +17,7 @@ const PalettePage: NextPage<IHexPalette | null> = ({ palette }) => {
   // };
   return palette ? (
     <div className={styles.PalettePage}>
-      {/* <DetailPalette palette={mockData} /> */}
       <DetailPalette palette={palette} />
-      {/* {JSON.stringify(palette)} */}
     </div>
   ) : (
     <div>Wrong Access</div>

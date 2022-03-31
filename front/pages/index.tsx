@@ -42,8 +42,11 @@ const Home: NextPage<IPaletteList> = ({ contents }) => {
   );
 };
 
-export const getStaticProps: GetServerSideProps = async () => {
-  const response = await axios.get('http://localhost:3004/palettes');
+export const getServerSideProps: GetServerSideProps = async () => {
+  // const response = await axios.get('http://localhost:3004/palettes');
+  const response = await axios.get(
+    'http://localhost:8080/palettes?startDate=2021-2-20&sort=old&page=0'
+  );
 
   return {
     props: {
