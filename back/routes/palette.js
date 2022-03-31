@@ -18,12 +18,22 @@ const router = express.Router();
 //     .catch((err) => res.status(500).send(err));
 // });
 
+// router.get("/list", (req, res) => {
+//   const { tags = '', sort, startDate, page = 0, limit = 50 } = req.query;
+//   Palette.findByFilterOptions(sort, tags, startDate, page, limit)
+//     .then((palette) => {
+//       if (!palette.length) return res.status(204).send({ err: "Palette not found" });
+//       res.send(palette);
+//     })
+//     .catch((err) => res.status(500).send(err));
+// });
+
 router.get("/", (req, res) => {
-  const { tags, sort, startDate, page = 0, limit = 50 } = req.query;
-  const parsedTags = tags.split(",");
-  Palette.findByFilterOptions(sort, parsedTags, startDate)
+  const { tags='', sort, startDate, page, limit = 50 } = req.query;
+  // const parsedTags = tags.split(",");
+  Palette.findByFilterOptions(sort, tags, startDate, page, limit)
     .then((palette) => {
-      if (!palette.length) return res.status(404).send({ err: "Palette not found" });
+      if (!palette.length) return res.status(204).send({ err: "Palette not found" });
       res.send(palette);
     })
     .catch((err) => res.status(500).send(err));
