@@ -1,10 +1,10 @@
 import Button from 'components/Button';
 import LikeButton, { ILikeButton } from 'components/Button/LikeButton';
 import { copyOnClipBoard } from 'utils/common';
-import { colorTagList } from 'components/Tag/ColorTag';
+import Tag from 'components/Tag';
+import ColorTag, { IColorTag, colorTagList } from 'components/Tag/ColorTag';
 
 import styles from './DetailPalette.module.scss';
-import ColorTag, { IColorTag } from 'components/Tag/ColorTag';
 
 interface IDetailFooter extends ILikeButton {
   tags: string[];
@@ -24,9 +24,13 @@ const DetailFooter: React.FC<IDetailFooter> = ({ paletteId, like, tags }) => {
       <div className={styles.tagList}>
         {tags.map((tag, index) => {
           const matchTag: IColorTag | undefined = colorTagList.find(
-            (colorTag) => tag === colorTag.label
+            (colorTag) => tag === colorTag.id
           );
-          return matchTag ? <ColorTag tag={matchTag} key={index} /> : null;
+          return matchTag ? (
+            <ColorTag tag={matchTag} key={index} />
+          ) : (
+            <Tag id={tag} label={tag} key={index} />
+          );
         })}
       </div>
     </div>

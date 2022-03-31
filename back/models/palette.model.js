@@ -53,7 +53,6 @@ paletteSchema.statics.findOneByPaletteId = function (paletteId) {
 
 paletteSchema.statics.findByFilterOptions = function (sort, tags, startDate, page, limit) {
   console.log(sort, tags, startDate);
-
   let sortOption;
   switch (sort) {
     case "hot":
@@ -66,9 +65,10 @@ paletteSchema.statics.findByFilterOptions = function (sort, tags, startDate, pag
       sortOption = { createdAt: -1 };
   }
   if (tags.length) {
+    const parsedTags = tags.split(",");
     return this.find({})
       .where("tags")
-      .all([...tags])
+      .all([...parsedTags])
       .where("createdAt")
       .gte(new Date(new Date(startDate)))
       .skip(page * limit)

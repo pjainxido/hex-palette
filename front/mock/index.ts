@@ -18,7 +18,7 @@ export const mockHexPalette: Palette = {
   like: 1004,
   createdAt: new Date(2020, 3, 1),
   title: 'looooooooooooooooooooongtitle',
-  tags: ['sample', 'Red', 'Orange'],
+  tags: ['sample', 'red', 'orange'],
 };
 
 export const mockPaletteList: Palette[] = [
