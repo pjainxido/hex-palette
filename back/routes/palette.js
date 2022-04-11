@@ -29,9 +29,9 @@ const router = express.Router();
 // });
 
 router.get("/", (req, res) => {
-  const { tags='', sort, startDate, page, limit = 50 } = req.query;
+  const { tags='', sort, startDate, page, limit = 50, title } = req.query;
   // const parsedTags = tags.split(",");
-  Palette.findByFilterOptions(sort, tags, startDate, page, limit)
+  Palette.findByFilterOptions(sort, tags, startDate, page, limit, title)
     .then((palette) => {
       if (!palette.length) return res.status(204).send({ err: "Palette not found" });
       res.send(palette);
