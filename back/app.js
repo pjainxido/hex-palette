@@ -1,8 +1,8 @@
-const dotenv = require('dotenv');
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-
+const dotenv = require("dotenv");
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const cors = require("cors");
 
 dotenv.config();
 
@@ -11,6 +11,12 @@ const MONGODB_URI = process.env.MONGO_DB_URI;
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+let corsOptions = {
+  origin: "http://localhost:3000",
+  credentials: true,
+};
+app.use(cors(corsOptions));
 
 mongoose.Promise = global.Promise;
 mongoose
@@ -29,8 +35,7 @@ mongoose
 //   res.json({ message: "Server is running :D" });
 // });
 
-
-app.use("/palettes", require('./routes/palette'));
+app.use("/palettes", require("./routes/palette"));
 
 const PORT = 8080;
 

@@ -51,8 +51,21 @@ paletteSchema.statics.findOneByPaletteId = function (paletteId) {
   return this.findOne({ id: paletteId });
 };
 
-paletteSchema.statics.findByFilterOptions = function (sort, tags, startDate, page, limit) {
-  console.log(sort, tags, startDate);
+paletteSchema.statics.findByFilterOptions = function (sort, tags, startDate, page, limit, title) {
+  console.log(sort, tags, startDate, title);
+  // /.*m.*/
+  const titleQuery = title
+    ? {
+        title: {$regex: title} 
+      }
+    : {};
+  // const titleQuery = title
+  //   ? {
+  //       "title": RegExp(`.*${title}.*`),
+  //     }
+  //   : {};
+
+  console.log(titleQuery);
   let sortOption;
   switch (sort) {
     case "hot":
@@ -66,7 +79,7 @@ paletteSchema.statics.findByFilterOptions = function (sort, tags, startDate, pag
   }
   if (tags.length) {
     const parsedTags = tags.split(",");
-    return this.find({})
+    return this.find(findQuery)
       .where("tags")
       .all([...parsedTags])
       .where("createdAt")
