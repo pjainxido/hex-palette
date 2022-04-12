@@ -12,7 +12,13 @@ export interface IHexPalette {
 
 const HexPalette: React.FC<IHexPalette> = ({ palette }) => {
   const { id, hexCodes, like, createdAt, title } = palette;
-  const hexCodeList: string[] = hexCodes.split('#').map((code) => '#' + code);
+  const hexCodeList: string[] = hexCodes
+    .split('#')
+    .filter((code) => {
+      const isHexCode = /[0-9A-Fa-f]{6}/g;
+      return isHexCode.test(code);
+    })
+    .map((code) => '#' + code);
 
   return (
     <div className={styles.HexPalette}>
