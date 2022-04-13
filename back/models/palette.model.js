@@ -56,16 +56,13 @@ paletteSchema.statics.findByFilterOptions = function (sort, tags, startDate, pag
   // /.*m.*/
   const titleQuery = title
     ? {
-        title: {$regex: title} 
+        title: { $regex: `.*${title}.*` },
       }
     : {};
-  // const titleQuery = title
-  //   ? {
-  //       "title": RegExp(`.*${title}.*`),
-  //     }
-  //   : {};
+ 
+  const dateQuery = startDate ? { createdAt: { $gte: new Date(startDate) } } : {};
+  const findQuery = { ...titleQuery, ...dateQuery };
 
-  console.log(titleQuery);
   let sortOption;
   switch (sort) {
     case "hot":
@@ -82,14 +79,14 @@ paletteSchema.statics.findByFilterOptions = function (sort, tags, startDate, pag
     return this.find(findQuery)
       .where("tags")
       .all([...parsedTags])
-      .where("createdAt")
-      .gte(new Date(new Date(startDate)))
       .skip(page * limit)
-      .limit(50)
+      .limit(18)
       .sort(sortOption);
   }
-
-  return this.find().where("createdAt");
+  return this.find(findQuery)
+    .skip(page * limit)
+    .limit(18)
+    .sort(sortOption);
 };
 
 paletteSchema.plugin(autoIncrement.plugin, {

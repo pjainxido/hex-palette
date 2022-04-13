@@ -31,9 +31,6 @@ mongoose
     process.exit();
   });
 
-// app.get("/", (req, res) => {
-//   res.json({ message: "Server is running :D" });
-// });
 
 app.use("/palettes", require("./routes/palette"));
 

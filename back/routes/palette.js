@@ -29,6 +29,7 @@ const router = express.Router();
 // });
 
 router.get("/", (req, res) => {
+  console.log('req.query',req.query);
   const { tags='', sort, startDate, page, limit = 50, title } = req.query;
   // const parsedTags = tags.split(",");
   Palette.findByFilterOptions(sort, tags, startDate, page, limit, title)
