@@ -29,15 +29,17 @@ const router = express.Router();
 // });
 
 router.get("/", (req, res) => {
-  console.log('req.query',req.query);
-  const { tags='', sort, startDate, page, limit = 50, title } = req.query;
-  // const parsedTags = tags.split(",");
+  console.log("req.query", req.query);
+  const { tags = "", sort, startDate, page, limit = 50, title } = req.query;
   Palette.findByFilterOptions(sort, tags, startDate, page, limit, title)
     .then((palette) => {
       if (!palette.length) return res.status(204).send({ err: "Palette not found" });
       res.send(palette);
     })
-    .catch((err) => res.status(500).send(err));
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(err);
+    });
 });
 
 router.get("/id/:id", (req, res) => {

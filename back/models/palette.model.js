@@ -53,7 +53,6 @@ paletteSchema.statics.findOneByPaletteId = function (paletteId) {
 
 paletteSchema.statics.findByFilterOptions = function (sort, tags, startDate, page, limit, title) {
   console.log(sort, tags, startDate, title);
-  // /.*m.*/
   const titleQuery = title
     ? {
         title: { $regex: `.*${title}.*` },
@@ -62,6 +61,7 @@ paletteSchema.statics.findByFilterOptions = function (sort, tags, startDate, pag
  
   const dateQuery = startDate ? { createdAt: { $gte: new Date(startDate) } } : {};
   const findQuery = { ...titleQuery, ...dateQuery };
+  console.log(findQuery);
 
   let sortOption;
   switch (sort) {
@@ -83,6 +83,7 @@ paletteSchema.statics.findByFilterOptions = function (sort, tags, startDate, pag
       .limit(18)
       .sort(sortOption);
   }
+
   return this.find(findQuery)
     .skip(page * limit)
     .limit(18)

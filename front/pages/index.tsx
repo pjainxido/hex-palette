@@ -3,27 +3,43 @@ import type { NextPage } from 'next';
 import PaletteList from 'components/PaletteList';
 import { IPaletteList } from 'components/PaletteList';
 
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
-const Home: NextPage<IPaletteList> = ({ list }) => {
+interface Props extends IPaletteList {
+  error?: boolean;
+}
+
+const Home: NextPage<Props> = ({ list, error }) => {
   return (
     <div>
-      <PaletteList list={list} />
+      <PaletteList list={list}>
+        {error && <div>{`Error On Server`}</div>}
+      </PaletteList>
     </div>
   );
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  // const response = await axios.get('http://localhost:3004/palettes');
-  const response = await axios.get(
-    'http://localhost:8080/palettes?sort=old&page=0'
-  );
-
-  return {
-    props: {
-      list: response.data,
-    },
-  };
+  let response: AxiosResponse;
+  try {
+    response = await axios.get(
+      'http://localhost:8080/palettes?sort=old&page=0'
+    );
+    console.log(response);
+    return {
+      props: {
+        list: response.data,
+      },
+    };
+  } catch (err) {
+    console.log(err);
+    return {
+      props: {
+        list: [],
+        error: true,
+      },
+    };
+  }
 };
 
 export default Home;

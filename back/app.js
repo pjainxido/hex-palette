@@ -13,9 +13,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 let corsOptions = {
-  origin: "http://localhost:3000",
-  credentials: true,
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
 };
+
 app.use(cors(corsOptions));
 
 mongoose.Promise = global.Promise;
@@ -30,7 +33,6 @@ mongoose
     console.error("DB Connet fail", err);
     process.exit();
   });
-
 
 app.use("/palettes", require("./routes/palette"));
 

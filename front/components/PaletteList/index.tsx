@@ -13,7 +13,7 @@ export interface IPaletteList {
   list: Palette[];
 }
 
-const PaletteList: React.FC<IPaletteList> = ({ list }) => {
+const PaletteList: React.FC<IPaletteList> = ({ children, list }) => {
   const [paletteList, setPaletteList] = useState<Palette[]>([]);
   const [page, setPage] = useState<number>(0);
 
@@ -44,35 +44,36 @@ const PaletteList: React.FC<IPaletteList> = ({ list }) => {
         return nextDate - prevDate;
     }
   };
+
   useEffect(() => {
     const filterContents = list
       .filter((palette) => filterPalette(palette))
       .sort((prev, next) => sortPalette(prev, next));
     setPaletteList([...filterContents]);
   }, []);
+
   const requestPaletteList = async (page: number) => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/palettes?sort=${sort}&page=${page}&startDate=${timeFrame}&title=${title}`
+        `http://localhost:8080/palettes?sort=${sort}&page=${page}&title=${title}`
       );
       console.log(response);
-
       setPaletteList((prev) => [...prev]);
     } catch (err) {
       console.error(err);
     }
   };
+
   useEffect(() => {
     requestPaletteList(page);
   }, [page]);
 
   return (
     <div className={styles.PaletteList}>
-      {paletteList.length
-        ? paletteList.map((item, index) => {
-            return <HexPalette key={index} palette={{ ...item }} />;
-          })
-        : 'NO RESULT'}
+      {children}
+      {paletteList.map((item, index) => {
+        return <HexPalette key={index} palette={{ ...item }} />;
+      })}
     </div>
   );
 };
