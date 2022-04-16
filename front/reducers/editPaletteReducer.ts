@@ -1,4 +1,6 @@
 type EditPaletteState = {
+  title: string;
+  tags: string[];
   hexCodes: string[];
   onPicker: boolean;
   targetIndex: number;
@@ -15,6 +17,8 @@ const defaulthexCodes: string[] = [
 ];
 
 const initialPaletteState: EditPaletteState = {
+  title: '',
+  tags: [],
   hexCodes: defaulthexCodes,
   onPicker: false,
   targetIndex: 0,
@@ -25,7 +29,9 @@ type EditPaletteAction =
   | { type: 'LOAD_PALETTE'; hexCodes: string[] }
   | { type: 'SELECT_PALETTE'; target: number }
   | { type: 'CLOSE_PICKER' }
-  | { type: 'HANDLE_PICKER'; hexCode: string };
+  | { type: 'HANDLE_PICKER'; hexCode: string }
+  | { type: 'CHANGE_TITLE'; title: string }
+  | { type: 'CHANGE_TAGS'; tags: string[] };
 
 const editPaletteReducer = (
   state: EditPaletteState,
@@ -50,6 +56,7 @@ const editPaletteReducer = (
         ...state,
         onPicker: false,
       };
+
     case 'HANDLE_PICKER':
       const { hexCode } = action;
       return {
@@ -61,6 +68,10 @@ const editPaletteReducer = (
         ],
         pickerColor: hexCode,
       };
+    case 'CHANGE_TITLE':
+      return { ...state, title: action.title };
+    case 'CHANGE_TAGS':
+      return { ...state, tags: [...action.tags] };
   }
 };
 

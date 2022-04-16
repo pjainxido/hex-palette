@@ -50,7 +50,7 @@ const PaletteList: React.FC<IPaletteList> = ({ children, list }) => {
       .filter((palette) => filterPalette(palette))
       .sort((prev, next) => sortPalette(prev, next));
     setPaletteList([...filterContents]);
-  }, []);
+  }, [list]);
 
   const requestPaletteList = async (page: number) => {
     try {
